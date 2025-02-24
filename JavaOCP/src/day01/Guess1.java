@@ -8,8 +8,6 @@ public class Guess1 {
 	public static void main(String[] args) {
 		// 1~9 猜數字
 		Random rand = new Random();
-		int ans = rand.nextInt(9) + 1; // 0~8 + 1 => 1~9
-		int min = 0, max = 10;
 		int userWinCount = 0, pcWinCount = 0; // 使用者與pc贏的次數
 		// 三戰二勝
 		for(int i=1;i<=3;i++) {
@@ -18,6 +16,10 @@ public class Guess1 {
 				break;
 			}
 			System.out.printf("第 %d 回合%n", i);
+			
+			int ans = rand.nextInt(9) + 1; // 0~8 + 1 => 1~9
+			int min = 0, max = 10;
+			
 			do {
 				// 使用者猜:
 				Scanner sc = new Scanner(System.in);
