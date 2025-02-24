@@ -10,7 +10,7 @@ public class Guess2 {
 		// 剪刀石頭布, 三戰二勝
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("剪刀(2)石頭(0)布(1):");
+			System.out.print("剪刀(2)石頭(0)布(1):");
 			int userGuess = sc.nextInt();
 			int pcGuess = rand.nextInt(3); // 0~2
 			// 判讀出 ?
