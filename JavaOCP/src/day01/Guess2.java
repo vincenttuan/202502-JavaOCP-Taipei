@@ -26,7 +26,13 @@ public class Guess2 {
 				Scanner sc = new Scanner(System.in);
 				System.out.print("剪刀(2)石頭(0)布(1):");
 				int userGuess = sc.nextInt();
+				// 防呆
+				if(userGuess < 0 || userGuess > 2) {
+					continue;
+				}
+				
 				int pcGuess = rand.nextInt(3); // 0~2
+				
 				// 判讀出 ?
 				System.out.printf("玩家出:%s(%d) 電腦出:%s(%d)%n", 
 						choices[userGuess], userGuess, 
