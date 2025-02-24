@@ -6,6 +6,13 @@ import java.util.Scanner;
 public class Guess2 {
 
 	public static void main(String[] args) {
+		// 建立剪刀石頭布陣列
+		String[] choices = {"石頭", "布", "剪刀"};
+		//                    0     1     2
+		System.out.println(choices[0]); // 石頭
+		System.out.println(choices[1]); // 布
+		System.out.println(choices[2]); // 剪刀
+		
 		Random rand = new Random();
 		int userWinCount = 0, pcWinCount = 0;
 		for(int i=1;i<=3;i++) {
@@ -21,7 +28,9 @@ public class Guess2 {
 				int userGuess = sc.nextInt();
 				int pcGuess = rand.nextInt(3); // 0~2
 				// 判讀出 ?
-				System.out.printf("玩家出:%d 電腦出:%d%n", userGuess, pcGuess);
+				System.out.printf("玩家出:%s(%d) 電腦出:%s(%d)%n", 
+						choices[userGuess], userGuess, 
+						choices[pcGuess], pcGuess);
 				// 判斷
 				if(userGuess == pcGuess) {
 					System.out.println("平手");
