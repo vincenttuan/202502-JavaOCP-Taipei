@@ -11,7 +11,7 @@ public class Guess1 {
 		int userWinCount = 0, pcWinCount = 0; // 使用者與pc贏的次數
 		// 三戰二勝
 		for(int i=1;i<=3;i++) {
-			System.out.printf("玩家:%d 電腦:%d%n", userWinCount, pcWinCount);
+			System.out.printf("玩家:%d vs 電腦:%d%n", userWinCount, pcWinCount);
 			// 判斷是否有人達到 2 勝
 			if(userWinCount == 2 || pcWinCount == 2) {
 				break;
