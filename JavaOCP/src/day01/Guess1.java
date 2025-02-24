@@ -1,12 +1,14 @@
 package day01;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Guess1 {
 
 	public static void main(String[] args) {
 		// 1~9 猜數字
-		int ans = 7;
+		Random rand = new Random();
+		int ans = rand.nextInt(9) + 1; // 0~8 + 1 => 1~9
 		int min = 0, max = 10;
 		
 		do {
