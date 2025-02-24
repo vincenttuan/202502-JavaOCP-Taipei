@@ -9,7 +9,7 @@ public class Guess1 {
 		int ans = 7;
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.print("請輸入數字: ");
+			System.out.print("請輸入數字:");
 			int userGuess = sc.nextInt();
 			// 判斷
 			if(userGuess > ans) {
