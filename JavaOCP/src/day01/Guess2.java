@@ -22,8 +22,10 @@ public class Guess2 {
 					  (userGuess == 2 && pcGuess == 1) ||
 					  (userGuess == 1 && pcGuess == 0)) {
 				System.out.println("玩家贏");
+				break;
 			} else {
 				System.out.println("電腦贏");
+				break;
 			}
 			
 		} while(true);
