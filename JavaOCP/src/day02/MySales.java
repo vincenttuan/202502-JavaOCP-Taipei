@@ -25,7 +25,7 @@ public class MySales {
 		int cost2 = buyTwoGetOneFree(qty2); // 買二送一
 		System.out.println(cost2);
 		// -----------------------------------------------------
-		int qty3 = 14;
+		int qty3 = 15;
 	}
 	
 	// 買五送二
