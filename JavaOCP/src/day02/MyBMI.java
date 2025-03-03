@@ -18,6 +18,10 @@ public class MyBMI {
 		calcBMI(170, 60);
 		calcBMI(160, 50);
 		
+		// ---------------------------------------
+		
+		calcBMI(h1, w1);
+		calcBMI(h2, w2);
 	}
 	
 	// 建立一個可計算與印出 bmi 值的方法
