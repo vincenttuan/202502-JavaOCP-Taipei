@@ -46,6 +46,7 @@ public class MyATM {
 				MyBank.printBalance();
 				break;
 			case 0: // Exit(離開)
+				System.out.println("離開 ATM, 系統結束");
 				System.exit(0); // 強制離開系統
 				break;	
 			default:
