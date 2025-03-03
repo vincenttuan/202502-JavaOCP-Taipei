@@ -23,6 +23,7 @@ public class MyATM {
 		System.out.println("| 1. Deposit  |");
 		System.out.println("| 2. Withdraw |");
 		System.out.println("| 3. Print    |");
+		System.out.println("| 4. Transfer |"); // 轉帳/匯款
 		System.out.println("| 0. Exit     |");
 		System.out.println("+-------------+");
 		System.out.print("choice => ");

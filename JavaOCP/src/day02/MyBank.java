@@ -48,5 +48,19 @@ public class MyBank {
 	public static void printBalance() {
 		System.out.printf("餘額 $%,d%n", balance);
 	}
+	
+	// 轉帳方法
+	public static void transfer(int amount) {
+		if(amount <= 0) {
+			System.out.printf("轉帳失敗 轉帳金額 $%,d 轉帳金額必須 > $0%n", amount);
+			return; // 提前結束方法
+		} else if (amount > balance) {
+			System.out.printf("轉帳失敗 轉帳金額 $%,d > 目前餘額 $%,d%n", amount, balance);
+			return; // 提前結束方法
+		}
+		
+		balance -= amount;
+		System.out.printf("轉帳成功 $%,d%n", amount);
+	}
 
 }
