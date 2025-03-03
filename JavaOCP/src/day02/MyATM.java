@@ -1,6 +1,7 @@
 package day02;
 
 import java.util.Scanner;
+import static java.lang.System.out;
 
 public class MyATM {
 	
@@ -17,16 +18,16 @@ public class MyATM {
 	
 	// 選單
 	public static void menu() {
-		System.out.println("+-------------+");
-		System.out.println("|     ATM     |");
-		System.out.println("+-------------+");
-		System.out.println("| 1. Deposit  |");
-		System.out.println("| 2. Withdraw |");
-		System.out.println("| 3. Print    |");
-		System.out.println("| 4. Transfer |"); // 轉帳/匯款
-		System.out.println("| 0. Exit     |");
-		System.out.println("+-------------+");
-		System.out.print("choice => ");
+		out.println("+-------------+");
+		out.println("|     ATM     |");
+		out.println("+-------------+");
+		out.println("| 1. Deposit  |");
+		out.println("| 2. Withdraw |");
+		out.println("| 3. Print    |");
+		out.println("| 4. Transfer |"); // 轉帳/匯款
+		out.println("| 0. Exit     |");
+		out.println("+-------------+");
+		out.print("choice => ");
 	}
 	
 	// 操作
@@ -36,12 +37,12 @@ public class MyATM {
 		int amount = 0; // 存提款金額
 		switch (choice) {
 			case 1: // Deposit(存款)
-				System.out.print("請輸入存款金額: ");
+				out.print("請輸入存款金額: ");
 				amount = sc.nextInt();
 				MyBank.deposit(amount);
 				break;
 			case 2: // Withdraw(提款)
-				System.out.print("請輸入提款金額: ");
+				out.print("請輸入提款金額: ");
 				amount = sc.nextInt();
 				MyBank.withdraw(amount);
 				break;
@@ -49,17 +50,17 @@ public class MyATM {
 				MyBank.printBalance();
 				break;
 			case 4: // Transfer(轉帳)
-				System.out.print("請輸入轉帳金額: ");
+				out.print("請輸入轉帳金額: ");
 				amount = sc.nextInt();
 				MyBank.transfer(amount);
 				break;
 			case 0: // Exit(離開)
-				System.out.println("離開 ATM, 系統結束");
+				out.println("離開 ATM, 系統結束");
 				//System.exit(0); // 強制離開系統
 				stop = true;
 				break;	
 			default:
-				System.out.println("選擇錯誤, 請重新選擇!");
+				out.println("選擇錯誤, 請重新選擇!");
 				action(); // 重新執行 action(); 這邊是遞迴邏輯操作使用上要小心
 		}
 	}
