@@ -49,7 +49,7 @@ public class MyATM {
 				MyBank.printBalance();
 				break;
 			case 4: // Transfer(轉帳)
-				System.out.print("請輸入轉帳金額");
+				System.out.print("請輸入轉帳金額: ");
 				amount = sc.nextInt();
 				MyBank.transfer(amount);
 				break;
