@@ -2,6 +2,10 @@ package day02;
 
 import java.util.Scanner;
 import static java.lang.System.out;
+import static day02.MyBank.deposit;
+import static day02.MyBank.printBalance;
+import static day02.MyBank.transfer;
+import static day02.MyBank.withdraw;
 
 public class MyATM {
 	
@@ -39,20 +43,20 @@ public class MyATM {
 			case 1: // Deposit(存款)
 				out.print("請輸入存款金額: ");
 				amount = sc.nextInt();
-				MyBank.deposit(amount);
+				deposit(amount);
 				break;
 			case 2: // Withdraw(提款)
 				out.print("請輸入提款金額: ");
 				amount = sc.nextInt();
-				MyBank.withdraw(amount);
+				withdraw(amount);
 				break;
 			case 3: // Print(列印目前餘額)
-				MyBank.printBalance();
+				printBalance();
 				break;
 			case 4: // Transfer(轉帳)
 				out.print("請輸入轉帳金額: ");
 				amount = sc.nextInt();
-				MyBank.transfer(amount);
+				transfer(amount);
 				break;
 			case 0: // Exit(離開)
 				out.println("離開 ATM, 系統結束");
