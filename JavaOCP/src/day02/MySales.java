@@ -6,6 +6,7 @@ package day02;
  * 請撰寫
  * 買一送一方法
  * 買二送一方法
+ * 買五送二方法
  * 可以回傳應付款金額
 */
 public class MySales {
@@ -17,12 +18,20 @@ public class MySales {
 		int qty1 = 5;
 		//int currentQty = qty1 / 2 + qty1 % 2; // 實際要付的瓶數
 		//int cost = currentQty * price;
-		int cost1 = buyOneGetOneFree(qty1);
+		int cost1 = buyOneGetOneFree(qty1); // 買一送一
 		System.out.println(cost1);
 		// -----------------------------------------------------
 		int qty2 = 5;
-		int cost2 = buyTwoGetOneFree(qty2);
+		int cost2 = buyTwoGetOneFree(qty2); // 買二送一
 		System.out.println(cost2);
+		// -----------------------------------------------------
+		int qty3 = 14;
+	}
+	
+	// 買五送二
+	public static int buyFiveGetTwoFree(int qty) {
+		
+		return 0;
 	}
 	
 	// 買一送一
