@@ -14,7 +14,7 @@ public class MyBank {
 		printBalance(); // 查看餘額
 		withdraw(7000); // 提 7000
 		printBalance(); // 查看餘額
-		withdraw(5000); // 提 5000
+		withdraw(6000); // 提 6000
 		printBalance(); // 查看餘額
 	}
 	
