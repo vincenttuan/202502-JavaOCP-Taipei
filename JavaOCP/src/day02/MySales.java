@@ -39,7 +39,7 @@ public class MySales {
 	
 	// 買一送一
 	public static int buyOneGetOneFree(int qty) {
-		int currentQty = qty / 2 + qty % 2; // 實際要付的瓶數
+		int currentQty = (qty / 2)*1 + qty % 2; // 實際要付的瓶數
 		int cost = currentQty * price;
 		return cost;
 	}
