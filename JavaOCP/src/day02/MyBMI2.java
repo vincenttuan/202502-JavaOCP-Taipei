@@ -20,11 +20,13 @@ public class MyBMI2 {
 		System.out.println(bmi2);
 	}
 	
+	// 有回傳值方法
 	public static double getBMI(double h, double w) {
 		double bmi = w / Math.pow(h/100, 2);
 		return bmi; // 將計算好的 bmi 回傳
 	}
 	
+	// 無回傳值方法
 	public static void calcBMI(double h, double w) {
 		double bmi = w / Math.pow(h/100, 2);
 		System.out.println(bmi);
