@@ -4,24 +4,24 @@ package day02;
 public class MyBank {
 	
 	// 帳戶餘額
-	private static int balance = 10000; 
+	private static int balance = 0; 
 	
 	public static void main(String[] args) {
 		
 
 	}
 	
-	private static void deposit(int amount) {
+	public static void deposit(int amount) {
 		balance += amount;
 		System.out.printf("存款 $%d%n", amount);
 	}
 	
-	private static void withdraw(int amount) {
+	public static void withdraw(int amount) {
 		balance -= amount;
 		System.out.printf("提款 $%d%n", amount);
 	}
 	
-	private static void printBalance(int amount) {
+	public static void printBalance(int amount) {
 		System.out.printf("餘額 $%d%n", balance);
 	}
 
