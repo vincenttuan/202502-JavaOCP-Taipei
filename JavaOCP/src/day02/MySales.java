@@ -15,13 +15,14 @@ public class MySales {
 	public static void main(String[] args) {
 		
 		int qty1 = 5;
-		
 		//int currentQty = qty1 / 2 + qty1 % 2; // 實際要付的瓶數
 		//int cost = currentQty * price;
-		int cost = buyOneGetOneFree(qty1);
-		System.out.println(cost);
-		
-		
+		int cost1 = buyOneGetOneFree(qty1);
+		System.out.println(cost1);
+		// -----------------------------------------------------
+		int qty2 = 5;
+		int cost2 = buyTwoGetOneFree(qty2);
+		System.out.println(cost2);
 	}
 	
 	// 買一送一
@@ -33,7 +34,9 @@ public class MySales {
 	
 	// 買二送一
 	public static int buyTwoGetOneFree(int qty) {
-		return 0;
+		int currentQty = (qty / 3)*2 + qty % 3;
+		int cost = currentQty * price;
+		return cost;
 	}
 	
 }
