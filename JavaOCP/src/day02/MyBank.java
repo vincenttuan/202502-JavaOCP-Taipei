@@ -21,7 +21,7 @@ public class MyBank {
 		System.out.printf("提款 $%d%n", amount);
 	}
 	
-	public static void printBalance(int amount) {
+	public static void printBalance() {
 		System.out.printf("餘額 $%d%n", balance);
 	}
 
