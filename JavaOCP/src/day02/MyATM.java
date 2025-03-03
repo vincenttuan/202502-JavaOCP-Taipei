@@ -48,6 +48,11 @@ public class MyATM {
 			case 3: // Print(列印目前餘額)
 				MyBank.printBalance();
 				break;
+			case 4: // Transfer(轉帳)
+				System.out.print("請輸入轉帳金額");
+				amount = sc.nextInt();
+				MyBank.transfer(amount);
+				break;
 			case 0: // Exit(離開)
 				System.out.println("離開 ATM, 系統結束");
 				//System.exit(0); // 強制離開系統
