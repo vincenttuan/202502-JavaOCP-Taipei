@@ -3,10 +3,12 @@ package day02;
 import java.util.Scanner;
 
 public class MyATM {
-
+	
+	private static boolean stop; // 預設 false
+	
 	public static void main(String[] args) {
 		
-		while (true) {
+		while (!stop) {
 			menu();
 			action();
 		}
@@ -47,7 +49,8 @@ public class MyATM {
 				break;
 			case 0: // Exit(離開)
 				System.out.println("離開 ATM, 系統結束");
-				System.exit(0); // 強制離開系統
+				//System.exit(0); // 強制離開系統
+				stop = true;
 				break;	
 			default:
 				System.out.println("選擇錯誤, 請重新選擇!");
