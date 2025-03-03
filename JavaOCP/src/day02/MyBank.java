@@ -18,6 +18,7 @@ public class MyBank {
 		printBalance(); // 查看餘額
 	}
 	
+	// 存款方法
 	public static void deposit(int amount) {
 		if(amount <= 0) {
 			System.out.printf("存款失敗 存款金額 $%,d 存款金額必須 > $0%n", amount);
@@ -27,6 +28,7 @@ public class MyBank {
 		System.out.printf("存款成功 $%,d%n", amount);
 	}
 	
+	// 提款方法
 	public static void withdraw(int amount) {
 		// 提款金額 > 0 && 提款金額 <= 目前餘額
 		// 所以若 提款金額 <= 0 或 提款金額 > 目前餘額 都不能進行後續的提款動作
@@ -42,6 +44,7 @@ public class MyBank {
 		System.out.printf("提款成功 $%,d%n", amount);
 	}
 	
+	// 列印/查詢目前餘額
 	public static void printBalance() {
 		System.out.printf("餘額 $%,d%n", balance);
 	}
