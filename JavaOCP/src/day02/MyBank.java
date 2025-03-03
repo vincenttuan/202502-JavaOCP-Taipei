@@ -19,6 +19,10 @@ public class MyBank {
 	}
 	
 	public static void deposit(int amount) {
+		if(amount <= 0) {
+			System.out.printf("存款失敗 存款金額 $%,d 存款金額必須 > $0%n", amount);
+			return; // 提前結束方法
+		}
 		balance += amount;
 		System.out.printf("存款成功 $%,d%n", amount);
 	}
