@@ -7,8 +7,15 @@ public class MyBank {
 	private static int balance = 0; 
 	
 	public static void main(String[] args) {
-		
-
+		printBalance(); // 查看餘額
+		deposit(10000); // 存 10000
+		printBalance(); // 查看餘額
+		deposit(2000);  // 存 2000
+		printBalance(); // 查看餘額
+		withdraw(7000); // 提 7000
+		printBalance(); // 查看餘額
+		withdraw(5000); // 提 5000
+		printBalance(); // 查看餘額
 	}
 	
 	public static void deposit(int amount) {
