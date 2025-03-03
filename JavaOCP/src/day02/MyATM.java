@@ -6,8 +6,10 @@ public class MyATM {
 
 	public static void main(String[] args) {
 		
-		menu();
-		action();
+		while (true) {
+			menu();
+			action();
+		}
 		
 	}
 	
