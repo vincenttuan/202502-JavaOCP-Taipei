@@ -23,7 +23,7 @@ public class MyATM {
 		System.out.println("| 3. Print    |");
 		System.out.println("| 0. Exit     |");
 		System.out.println("+-------------+");
-		System.out.println("choice => ");
+		System.out.print("choice => ");
 	}
 	
 	// 操作
