@@ -28,7 +28,8 @@ public class MyBMI2 {
 	
 	// 無回傳值方法
 	public static void calcBMI(double h, double w) {
-		double bmi = w / Math.pow(h/100, 2);
+		//double bmi = w / Math.pow(h/100, 2);
+		double bmi = getBMI(h, w);
 		System.out.println(bmi);
 	}
 	
