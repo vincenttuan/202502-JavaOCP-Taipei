@@ -46,6 +46,11 @@ public class ArrayDemo2 {
 				 .filter(score -> score >= 60)
 				 .forEach(score -> System.out.print(score + ", "));
 		System.out.println();
+		
+		IntStream.of(90, 100, 50, 70, 35) // 專門給 int[] 使用的串流
+				 .filter(score -> score >= 60)
+				 .forEach(score -> System.out.print(score + ", "));
+		System.out.println();
 	}
 
 }
