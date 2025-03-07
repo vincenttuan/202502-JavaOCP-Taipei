@@ -11,7 +11,20 @@ public class ArrayDemo2 {
 		
 		System.out.println(Arrays.toString(scores));
 		
-		// 只要印出及格的分數
+		// 只要印出及格的分數 for-loop
+		for(int i=0;i<scores.length;i++) {
+			if(scores[i] >= 60) {
+				System.out.print(scores[i] + ", ");
+			}
+		}
+		System.out.println();
+		
+		for(int i=0;i<scores.length;i++) {
+			if(scores[i] < 60) {
+				continue;
+			}
+			System.out.print(scores[i] + ", ");
+		}
 		
 		
 	}
