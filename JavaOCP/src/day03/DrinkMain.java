@@ -9,15 +9,9 @@ public class DrinkMain {
 		drink1.price = 10;
 		drink1.cc = 350;
 		
-		Drink drink2 = new Drink();
-		drink2.name = "咖啡";
-		drink2.price = 60;
-		drink2.cc = 550;
+		Drink drink2 = new Drink("咖啡", 60, 550);
 		
-		Drink drink3 = new Drink();
-		drink3.name = "牛奶";
-		drink3.price = 40;
-		drink3.cc = 400;
+		Drink drink3 = new Drink("牛奶", 40, 400);
 		
 		System.out.printf("name: %s price: %d cc:%d%n", drink1.name, drink1.price, drink1.cc);
 		System.out.printf("name: %s price: %d cc:%d%n", drink2.name, drink2.price, drink2.cc);
