@@ -41,6 +41,11 @@ public class ArrayDemo2 {
 			  .filter(score -> score >= 60) // 只留下 score >= 60 的資料因此過濾出: 90 -> 100 -> 70 
 			  .forEach(score -> System.out.print(score + ", ")); // 逐一印出資料: 90 -> 100 -> 70
 		System.out.println();
+		
+		IntStream.of(scores) // 專門給 int[] 使用的串流
+				 .filter(score -> score >= 60)
+				 .forEach(score -> System.out.print(score + ", "));
+		System.out.println();
 	}
 
 }
