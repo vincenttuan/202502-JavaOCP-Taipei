@@ -1,5 +1,7 @@
 package day03;
 
+import java.util.Arrays;
+
 public class ArrayDemo1 {
 
 	public static void main(String[] args) {
@@ -34,7 +36,8 @@ public class ArrayDemo1 {
 		System.out.println();
 		
 		// Java 8 stream 來分析陣列元素
-		
+		Arrays.stream(scores).forEach(score -> System.out.print(score + ", "));
+		System.out.println();
 	}
 
 }
