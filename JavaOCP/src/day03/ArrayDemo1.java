@@ -21,10 +21,19 @@ public class ArrayDemo1 {
 		System.out.println(scores.length);
 		System.out.println(scores[0] + ", " + scores[1] + ", " + scores[2] + ", " + scores[3] + ", " + scores[4]);
 		
+		// 利用 for-loop
 		for(int i=0;i<scores.length;i++) {
 			System.out.print(scores[i] + ", ");
 		}
 		System.out.println();
+		
+		// 利用 for-each(in)
+		for(int score : scores) {
+			System.out.print(score + ", ");
+		}
+		System.out.println();
+		
+		// Java 8 stream 來分析陣列元素
 		
 	}
 
