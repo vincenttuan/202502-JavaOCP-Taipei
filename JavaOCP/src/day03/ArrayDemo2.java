@@ -25,6 +25,15 @@ public class ArrayDemo2 {
 			}
 			System.out.print(scores[i] + ", ");
 		}
+		System.out.println();
+		
+		// 只要印出及格的分數 for-in
+		for(int score : scores) {
+			if(score >= 60) {
+				System.out.print(score + ", ");
+			}
+		}
+		System.out.println();
 		
 		
 	}
