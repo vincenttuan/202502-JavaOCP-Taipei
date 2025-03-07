@@ -10,7 +10,10 @@ public class ArrayDemo2 {
 		int[] scores = {90, 100, 50, 70, 35};
 		
 		System.out.println(Arrays.toString(scores));
-
+		
+		// 只要印出及格的分數
+		
+		
 	}
 
 }
