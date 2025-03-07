@@ -17,7 +17,7 @@ public class ArrayDemo1 {
 		scores[3] = 70;
 		scores[4] = 35;
 		
-		System.out.println(scores);
+		System.out.println(scores); // [I@65ae6ba4: "["(一維陣列) "I"(整數) @(在) "65ae6ba4"(雜湊值)
 		System.out.println(scores.length);
 		System.out.println(scores[0] + ", " + scores[1] + ", " + scores[2] + ", " + scores[3] + ", " + scores[4]);
 		
