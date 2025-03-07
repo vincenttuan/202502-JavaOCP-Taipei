@@ -22,5 +22,8 @@ public class DrinkMain {
 		System.out.printf("name: %s price: %d cc:%d%n", drink1.name, drink1.price, drink1.cc);
 		System.out.printf("name: %s price: %d cc:%d%n", drink2.name, drink2.price, drink2.cc);
 		System.out.printf("name: %s price: %d cc:%d%n", drink3.name, drink3.price, drink3.cc);
+		
+		int total = drink1.price + drink2.price + drink3.price;
+		System.out.printf("總價: %d%n", total);
 	}
 }
