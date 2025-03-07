@@ -1,6 +1,7 @@
 package day03;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class ArrayDemo2 {
 
@@ -27,7 +28,7 @@ public class ArrayDemo2 {
 		}
 		System.out.println();
 		
-		// 只要印出及格的分數 for-in
+		// 只要印出及格的分數 for-each(in)
 		for(int score : scores) {
 			if(score >= 60) {
 				System.out.print(score + ", ");
@@ -35,7 +36,11 @@ public class ArrayDemo2 {
 		}
 		System.out.println();
 		
-		
+		// 利用 java 8 stream + filter 過濾資料
+		Arrays.stream(scores) // 陣列串流化: 90 -> 100 -> 50 -> 70 -> 35
+			  .filter(score -> score >= 60) // 只留下 score >= 60 的資料因此過濾出: 90 -> 100 -> 70 
+			  .forEach(score -> System.out.print(score + ", ")); // 逐一印出資料: 90 -> 100 -> 70
+		System.out.println();
 	}
 
 }
