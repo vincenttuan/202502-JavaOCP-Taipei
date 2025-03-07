@@ -38,6 +38,9 @@ public class ArrayDemo1 {
 		// Java 8 stream 來分析陣列元素
 		Arrays.stream(scores).forEach(score -> System.out.print(score + ", "));
 		System.out.println();
+		
+		// 利用 Arrays.toString() 直接印出陣列元素
+		System.out.println(Arrays.toString(scores));
 	}
 
 }
