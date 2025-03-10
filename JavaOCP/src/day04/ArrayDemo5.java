@@ -10,7 +10,7 @@ public class ArrayDemo5 {
 		// 總分 = ?
 		int sum = 0; // 負責將分數進行累加
 		for(int score : scores) {
-			sum += score; // 分數類加
+			sum += score; // 分數累加
 		}
 		System.out.printf("總分: %d%n", sum);
 		
