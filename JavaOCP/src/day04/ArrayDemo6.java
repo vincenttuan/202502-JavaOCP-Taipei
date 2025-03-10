@@ -12,5 +12,12 @@ public class ArrayDemo6 {
 		}
 		System.out.printf("最大值: %d%n", max);
 		// 請印出最低分 = ?
+		int min = scores[0];
+		for(int score : scores) {
+			if(score < min) {
+				min = score;
+			}
+		}
+		System.out.printf("最小值: %d%n", min);
 	}
 }
