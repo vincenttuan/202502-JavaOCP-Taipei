@@ -10,10 +10,12 @@ public class ArrayDemo4 {
 		System.out.println(Arrays.toString(scores));
 		
 		// 每一個分數都要加 5 分
-		scores[0] += 5; // scores[0] = scores[0] + 5;
-		scores[1] += 5;
-		scores[2] += 5;
-		
+		//scores[0] += 5; // scores[0] = scores[0] + 5;
+		//scores[1] += 5;
+		//scores[2] += 5;
+		for(int i=0;i<scores.length;i++) {
+			scores[i] += 5;
+		}
 		System.out.println(Arrays.toString(scores));
 		
 		
