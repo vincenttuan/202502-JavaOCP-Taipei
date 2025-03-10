@@ -9,6 +9,8 @@ public class ArrayDemo12 {
 		int[] coins = {50, 10, 5, 1}; // 硬幣面額
 		int[] counts = {0, 0, 0, 0}; // 各硬幣的數量
 		
+		System.out.printf("找 %d 元%n", totalChange);
+		
 		//int size = coins.length;
 		for(int i=0, size = coins.length;i<size;i++) {
 			/*
@@ -20,7 +22,6 @@ public class ArrayDemo12 {
 			totalChange %= coins[i]; // 剩餘
 		}
 		
-		System.out.printf("找 %d 元%n", totalChange);
 		for(int i=0;i<coins.length;i++) {
 			System.out.printf("%d 元 %d 枚\n", coins[i], counts[i]);
 		}
