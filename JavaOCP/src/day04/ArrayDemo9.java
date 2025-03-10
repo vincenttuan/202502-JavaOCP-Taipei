@@ -12,5 +12,9 @@ public class ArrayDemo9 {
 		int max = Math.max(max1, max2);
 		System.out.println(max);
 		
+		// 利用 concat 將二個陣列連起來之後再找到最大值
+		max = IntStream.concat(IntStream.of(scores1), IntStream.of(scores2)).max().getAsInt();
+		System.out.println(max);
+		
 	}
 }
