@@ -29,9 +29,9 @@ public class ArrayDemo11 {
 		
 		int one = totalChange;
 		
-		System.out.printf("%d元 %d 枚", 50, fifty);
-		System.out.printf("%d元 %d 枚", 10, ten);
-		System.out.printf("%d元 %d 枚", 5, five);
-		System.out.printf("%d元 %d 枚", 1, one);
+		System.out.printf("%d元 %d 枚%n", 50, fifty);
+		System.out.printf("%d元 %d 枚%n", 10, ten);
+		System.out.printf("%d元 %d 枚%n", 5, five);
+		System.out.printf("%d元 %d 枚%n", 1, one);
 	}
 }
