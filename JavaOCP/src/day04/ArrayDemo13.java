@@ -8,12 +8,20 @@ public class ArrayDemo13 {
 		int totalChange = 100 - 23; // 元
 		int[] coins  = {50, 10, 5, 1}; // 各硬幣面額
 		int[] qty    = {1, 2, 3, 5};   // 各硬幣庫存
+		//int[] qty    = {1, 1, 3, 5};   // 各硬幣庫存
 		int[] counts = {0, 0, 0, 0};   // 各硬幣要找的數量
 		
 		System.out.printf("找 %d 元%n", totalChange);
 		
-		//
-		
+		for(int i=0, size = coins.length;i<size;i++) {
+			int count = totalChange / coins[i]; // 枚
+			counts[i] = count;
+			// 扣庫存
+			if(qty[i] >= count) {
+				qty[i] -= count;
+				totalChange %= coins[i]; // 剩餘
+			}
+		}
 		
 		for(int i=0;i<coins.length;i++) {
 			System.out.printf("%d 元 %d 枚 剩餘庫存 %d 枚\n", coins[i], counts[i], qty[i]);
