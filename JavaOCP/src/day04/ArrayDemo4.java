@@ -17,7 +17,5 @@ public class ArrayDemo4 {
 			scores[i] += 5;
 		}
 		System.out.println(Arrays.toString(scores));
-		
-		
 	}
 }
