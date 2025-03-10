@@ -1,5 +1,7 @@
 package day04;
 
+import java.util.stream.IntStream;
+
 public class ArrayDemo6 {
 	public static void main(String[] args) {
 		int[] scores = {50, 90, 20, 80};
@@ -19,5 +21,11 @@ public class ArrayDemo6 {
 			}
 		}
 		System.out.printf("最小值: %d%n", min);
+		
+		// 利用 java IntStream 來求出最大與最小值
+		int max2 = IntStream.of(scores).max().getAsInt();
+		int min2 = IntStream.of(scores).min().getAsInt();
+		System.out.printf("最大值: %d%n", max2);
+		System.out.printf("最小值: %d%n", min2);
 	}
 }
