@@ -13,7 +13,10 @@ public class ArrayDemo5 {
 			sum += score; // 分數類加
 		}
 		System.out.printf("總分: %d%n", sum);
-
+		
+		// 平均 = ?
+		int avg = sum / scores.length;
+		System.out.printf("平均: %d%n", avg);
 	}
 
 }
