@@ -15,19 +15,29 @@ public class MultiArray5 {
 		};
 		
 		// 用來累計每一個餐點的銷售額
-		double totalSales = 0;
-		
+		double totalRrevenue = 0;
+		// 銷售額最高的 id
+		double highestId = 0;
+		// 銷售額最高的金額
+		double highestRevenue = 0;
+				
 		for(double[] item : menu) {
-			double sales = item[1] * item[2]; // 計算銷售額
+			double revenue = item[1] * item[2]; // 計算銷售額
+			// 判斷銷售額是否大於最高銷售額
+			if(revenue > highestRevenue) {
+				highestRevenue = revenue;
+				highestId = item[0];
+			}
 			// 印出每一個商品的銷售紀錄
 			System.out.printf("餐點id:%.0f 單價:%,.0f 銷售量:%,.0f 銷售額:%,.0f%n", 
-					item[0], item[1], item[2], sales);
-			totalSales += sales; // 銷售額累計
+					item[0], item[1], item[2], revenue);
+			totalRrevenue += revenue; // 銷售額累計
 		}
 		// 全店的總銷售額 ?
-		System.out.printf("全店的總銷售額:%,.0f%n", totalSales);
+		System.out.printf("全店的總銷售額:%,.0f%n", totalRrevenue);
 		
 		// 哪一個商品銷售額最高 ?
+		System.out.printf("哪一個商品銷售額最高:%.0f 銷售額:%,.0f%n", highestId, highestRevenue);
 
 	}
 
