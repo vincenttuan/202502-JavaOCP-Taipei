@@ -29,7 +29,7 @@ public class MultiArray4 {
 		}
 	}
 	
-	// 顯示每一個學生 bmi 值並
+	// 顯示每一個學生 bmi 值並取得bmi總和
 	public static double printStudentBmiAndGetSumOfBmi(double[][] students) {
 		double sumOfBmi = 0;
 		for(double[] student : students) {
