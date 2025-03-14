@@ -17,12 +17,18 @@ public class MultiArray3 {
 		System.out.println("------------------------");
 		// 2.請計算並印出每一個學生的 bmi 值
 		// 診斷 bmi <= 18 過輕 bmi > 23 過重, 其餘正常
+		double sumOfBmi = 0;
 		for(double[] student : students) {
 			double h = student[1]/100;
 			double w = student[2];
 			double bmi = w / (h*h);
+			sumOfBmi += bmi;
 			String result = (bmi <= 18) ? "過輕" : (bmi > 23) ? "過重" : "正常"; 
 			System.out.printf("座號:%.0f BMI:%.2f 診斷:%s%n", student[0], bmi, result);
 		}
+		System.out.println("------------------------");
+		// 3. 此班級學生 bmi 的平均 ?
+		double avgOfBmi = sumOfBmi / students.length;
+		System.out.printf("此班級學生 bmi 的平均:%.2f%n", avgOfBmi);
 	}
 }
