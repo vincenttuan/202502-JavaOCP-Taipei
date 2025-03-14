@@ -10,8 +10,12 @@ public class MultiArray3 {
 				{4, 175.0, 55.0},
 				{5, 183.0, 75.0},
 		};
+		// 1.請印出每一個學生的座號,身高與體重
+		for(double[] student : students) {
+			System.out.printf("座號:%.0f 身高:%.1f 體重:%.1f%n", student[0], student[1], student[2]);
+		}
 		
-		// 請印出每一個學生的 bmi 值
+		// 2.請計算並印出每一個學生的 bmi 值
 		
 	}
 }
