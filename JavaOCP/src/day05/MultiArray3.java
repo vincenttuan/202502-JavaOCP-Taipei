@@ -14,7 +14,7 @@ public class MultiArray3 {
 		for(double[] student : students) {
 			System.out.printf("座號:%.0f 身高:%.1f 體重:%.1f%n", student[0], student[1], student[2]);
 		}
-		//----------------------------------------------
+		System.out.println("------------------------");
 		// 2.請計算並印出每一個學生的 bmi 值
 		for(double[] student : students) {
 			double h = student[1]/100;
