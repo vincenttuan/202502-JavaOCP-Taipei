@@ -37,8 +37,20 @@ public class MultiArray5 {
 		System.out.printf("全店的總銷售額:%,.0f%n", totalRrevenue);
 		
 		// 哪一個商品銷售額最高 ?
-		System.out.printf("哪一個商品銷售額最高:%.0f 銷售額:%,.0f%n", highestId, highestRevenue);
+		System.out.printf("哪一個商品銷售額最高:%.0f(%s) 銷售額:%,.0f%n", 
+				highestId, getItemName(highestId), highestRevenue);
 
+	}
+	
+	public static String getItemName(double itemId) {
+		switch ((int)itemId) {
+			case 101: return "鐵板牛肉堡";
+			case 102: return "雞塊套餐";
+			case 103: return "雙層起司堡";
+			case 104: return "炸雞腿堡";
+			case 105: return "薯條套餐";
+			default: return "未知餐點";
+		}
 	}
 
 }
