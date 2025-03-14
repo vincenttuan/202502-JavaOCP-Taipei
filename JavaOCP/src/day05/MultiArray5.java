@@ -17,6 +17,9 @@ public class MultiArray5 {
 		
 		for(double[] item : menu) {
 			double sales = item[1] * item[2];
+			// 印出每一個商品的銷售紀錄
+			System.out.printf("餐點id:%.0f 單價:%,.0f 銷售量:%,.0f 銷售額:%,.0f%n", 
+					item[0], item[1], item[2], sales);
 			totalSales += sales;
 		}
 		// 全店的總銷售額 ?
