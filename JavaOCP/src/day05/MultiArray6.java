@@ -23,15 +23,18 @@ public class MultiArray6 {
 		
 		// 所有成績加總 ?
 		int sum = 0;
+		int count = 0;
 		for(int[][] school : schools) {
 			for(int[] classes : school) {
 				for(int score : classes) {
 					sum += score;
+					count++;
 				}
 			}
 		}
 		System.out.printf("成績總和: %,d%n", sum);
-
+		System.out.printf("成績平均: %,d%n", sum/count);
+		System.out.printf("成績平均: %,.2f%n", (double)sum/count);
 	}
 
 }
