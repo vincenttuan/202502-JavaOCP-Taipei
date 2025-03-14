@@ -13,14 +13,16 @@ public class MultiArray5 {
 				{104, 55.0, 180}, // 餐點 id (炸雞腿堡), 單價 55 元, 銷售量 180
 				{105, 40.0, 220}, // 餐點 id (薯條套餐), 單價 40 元, 銷售量 220
 		};
+		
+		// 用來累計每一個餐點的銷售額
 		double totalSales = 0;
 		
 		for(double[] item : menu) {
-			double sales = item[1] * item[2];
+			double sales = item[1] * item[2]; // 計算銷售額
 			// 印出每一個商品的銷售紀錄
 			System.out.printf("餐點id:%.0f 單價:%,.0f 銷售量:%,.0f 銷售額:%,.0f%n", 
 					item[0], item[1], item[2], sales);
-			totalSales += sales;
+			totalSales += sales; // 銷售額累計
 		}
 		// 全店的總銷售額 ?
 		System.out.printf("全店的總銷售額:%,.0f%n", totalSales);
