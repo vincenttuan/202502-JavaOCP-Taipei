@@ -1,5 +1,7 @@
 package day05;
 
+import java.lang.management.PlatformLoggingMXBean;
+
 public class MultiArray5 {
 
 	public static void main(String[] args) {
@@ -11,8 +13,14 @@ public class MultiArray5 {
 				{104, 55.0, 180}, // 餐點 id (炸雞腿堡), 單價 55 元, 銷售量 180
 				{105, 40.0, 220}, // 餐點 id (薯條套餐), 單價 40 元, 銷售量 220
 		};
+		double totalSales = 0;
 		
+		for(double[] item : menu) {
+			double sales = item[1] * item[2];
+			totalSales += sales;
+		}
 		// 全店的總銷售額 ?
+		System.out.printf("全店的總銷售額:%,.0f%n", totalSales);
 		
 		// 哪一個商品銷售額最高 ?
 
