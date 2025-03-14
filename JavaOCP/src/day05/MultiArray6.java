@@ -5,7 +5,7 @@ public class MultiArray6 {
 	public static void main(String[] args) {
 		// 學校 -> 班級 -> 學生(成績)
 		// [學校][班級][學生] = 成績
-		int [][][] school = {
+		int [][][] schools = {
 				{ // 第一所學校 (index=0)
 					{95, 88, 76}, // 班級一 (index=0) 
 					{77, 66, 54}, // 班級二 (index=1)
@@ -19,7 +19,9 @@ public class MultiArray6 {
 		};
 		
 		// 印出 100 分的成績
-		System.out.println(school[1][0][1]);
+		System.out.println(schools[1][0][1]);
+		
+		// 所有成績加總 ?
 
 	}
 
