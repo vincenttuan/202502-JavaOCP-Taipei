@@ -41,13 +41,13 @@ public class MultiArray4 {
 		return sumOfBmi;
 	}
 	
-	// 計算 bmi
+	// 計算並取得 bmi 值
 	public static double getAndCalcBmi(double h, double w) {
 		double bmi = w / (h*h);
 		return bmi;
 	}
 	
-	// 診斷 bmi 狀態
+	// 診斷 bmi 狀態定取得狀態結果
 	public static String getBmiResult(double bmi) {
 		return (bmi <= 18) ? "過輕" : (bmi > 23) ? "過重" : "正常";
 	}
