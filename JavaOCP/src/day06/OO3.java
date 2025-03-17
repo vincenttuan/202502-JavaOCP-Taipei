@@ -1,5 +1,7 @@
 package day06;
 
+import java.util.stream.Stream;
+
 public class OO3 {
 	public static void main(String[] args) {
 		Student s1 = new Student("John", 70);
@@ -19,6 +21,12 @@ public class OO3 {
 		}
 		
 		System.out.println("-------------------");
+		Stream.of(students)
+			  .forEach(student -> {
+				  if(student.score >= 60) {
+					  System.out.println(student);
+				  }
+			  });
 		
 	}
 }
