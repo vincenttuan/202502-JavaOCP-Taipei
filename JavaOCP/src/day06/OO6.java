@@ -1,6 +1,7 @@
 package day06;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class OO6 {
 
@@ -13,7 +14,22 @@ public class OO6 {
 		System.out.println(products);
 		System.out.println(Arrays.toString(products));
 		
+		System.out.println("---------------");
 		// 請問總花費 ?
+		int total = 0;
+		for(Product product : products) {
+			total += product.price * product.qty;
+		}
+		System.out.println(total);
+		
+		System.out.println("---------------");
+		int total2 = Stream.of(products)
+						   .mapToInt(product -> product.price * product.qty)
+						   .sum();
+		System.out.println(total2);
+		
+		// 哪一個商品買最多錢
+		
 		
 	}
 
