@@ -2,6 +2,7 @@ package day06;
 
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.stream.Stream;
 
 public class OO6 {
@@ -51,6 +52,15 @@ public class OO6 {
 								   })
 								   .get(); // 強迫取 Product 物件資料, 風險: 如無資料時則會出現錯誤~
 		System.out.println(maxProduct);
+		
+		// 商品的平均價格 ?
+		OptionalDouble optAvg = Stream.of(products).mapToInt(p -> p.price).average();
+		if(optAvg.isPresent()) {
+			double avg = optAvg.getAsDouble();
+			System.out.printf("平均價格:%.1f%n", avg);
+		} else {
+			System.out.println("查無平均價格");
+		}
 		
 	}
 
