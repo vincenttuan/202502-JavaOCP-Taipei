@@ -33,7 +33,13 @@ public class OO4 {
 				 		   .average() // 平均
 				 		   .getAsDouble(); // 取出平均的 double 值
 		System.out.printf("總分:%d 平均:%.1f%n", sum2, avg);
-						 
+		
+		// 最大值, 最小值
+		int max = Stream.of(students).mapToInt(student -> student.score).max().getAsInt();
+		int min = Stream.of(students).mapToInt(student -> student.score).min().getAsInt();
+		System.out.printf("最大值:%d 最小值:%d%n", max, min);
+		
+		
 		
 	}
 }
