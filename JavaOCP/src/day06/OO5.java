@@ -51,6 +51,7 @@ public class OO5 {
 		System.out.println(minStudent);
 		System.out.println("-------------------");
 		Student maxStudent2 = Stream.of(students)
+									//       兩兩相比      ->   比整數 (stud1的分數, stud2的分數)
 									.max((stud1, stud2) -> Integer.compare(stud1.score, stud2.score))
 									.get();
 		System.out.println(maxStudent2);
