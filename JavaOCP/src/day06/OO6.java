@@ -10,6 +10,7 @@ public class OO6 {
 		Product p3 = new Product("可樂", 5, 20);
 		
 		Product[] products = {p1, p2, p3};
+		System.out.println(products);
 		System.out.println(Arrays.toString(products));
 
 	}
