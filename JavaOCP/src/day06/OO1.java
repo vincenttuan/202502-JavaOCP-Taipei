@@ -12,7 +12,11 @@ public class OO1 {
 		System.out.println(s1.name + ", " + s1.score);
 		System.out.println(s2.name + ", " + s2.score);
 		
-
+		System.out.println(s1.toString());
+		System.out.println(s2.toString());
+		
+		System.out.println(s1); // 預設會呼叫 toString()
+		System.out.println(s2); // 預設會呼叫 toString()
 	}
 
 }
