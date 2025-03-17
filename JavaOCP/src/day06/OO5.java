@@ -54,7 +54,11 @@ public class OO5 {
 									.max((stud1, stud2) -> Integer.compare(stud1.score, stud2.score))
 									.get();
 		System.out.println(maxStudent2);
-		
+		System.out.println("-------------------");
+		Student minStudent2 = Stream.of(students)
+									.min((stud1, stud2) -> Integer.compare(stud1.score, stud2.score))
+									.get();
+		System.out.println(minStudent2);
 		
 	}
 }
