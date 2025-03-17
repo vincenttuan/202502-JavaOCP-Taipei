@@ -7,10 +7,10 @@ public class OO1 {
 		s1.name = "John";
 		s1.score = 70;
 		
-		Student s2 = new Student();
-		s2.name = "Mary";
-		s2.score = 80;
+		Student s2 = new Student("Mary", 80);
 		
+		System.out.println(s1.name + ", " + s1.score);
+		System.out.println(s2.name + ", " + s2.score);
 		
 
 	}
