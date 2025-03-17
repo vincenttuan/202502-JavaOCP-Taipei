@@ -28,5 +28,11 @@ public class OO3 {
 				  }
 			  });
 		
+		System.out.println("-------------------");
+		Stream.of(students)
+			  .filter(student -> student.score >= 60)  // 只保留 score >= 60 的資訊
+			  .forEach(student -> System.out.println(student));
+		
+		
 	}
 }
