@@ -10,8 +10,15 @@ public class OO3 {
 		
 		Student[] students = {s1, s2, s3, s4, s5};
 		
+		System.out.println("-------------------");
 		// 請印出及格的學生姓名與分數
+		for(Student student : students) {
+			if(student.score >= 60) {
+				System.out.println(student);
+			}
+		}
 		
+		System.out.println("-------------------");
 		
 	}
 }
