@@ -1,6 +1,7 @@
 package day06;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class OO6 {
@@ -29,7 +30,28 @@ public class OO6 {
 		System.out.println(total2);
 		
 		// 哪一個商品買最多錢
+		Optional<Product> optProduct = Stream.of(products)
+										  	 .max((prod1, prod2) -> {
+										  		 int cost1 = prod1.price*prod1.qty;
+										  		 int cost2 = prod2.price*prod2.qty;
+										  		 return Integer.compare(cost1, cost2);
+										  	 });
 		
+		if(optProduct.isPresent()) {
+			Product product = optProduct.get();
+			System.out.println(product);
+		} else {
+			System.out.println("商品不存在");
+		}
+		//----------------------------------------------------------------------------
+		Product maxProduct = Stream.of(products)
+								   .max((prod1, prod2) -> {
+									   int cost1 = prod1.price*prod1.qty;
+									   int cost2 = prod2.price*prod2.qty;
+									   return Integer.compare(cost1, cost2);
+								   })
+								   .get(); // 強迫取 Product 物件資料, 風險: 如無資料時則會出現錯誤~
+		System.out.println(maxProduct);
 		
 	}
 
