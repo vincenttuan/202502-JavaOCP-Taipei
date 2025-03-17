@@ -26,6 +26,29 @@ public class OO5 {
 		System.out.printf("個數:%d%n", stat.getCount());
 		System.out.println("-------------------");
 		// 請問最高分與最低分的人名是 ?
+		Student maxStudent = null;
+		for(Student student : students) {
+			if(maxStudent == null) {
+				maxStudent = student;
+				continue;
+			}
+			if(student.score > maxStudent.score) {
+				maxStudent = student;
+			}
+		}
+		System.out.println(maxStudent);
+		System.out.println("-------------------");
+		Student minStudent = null;
+		for(Student student : students) {
+			if(minStudent == null) {
+				minStudent = student;
+				continue;
+			}
+			if(student.score < minStudent.score) {
+				minStudent = student;
+			}
+		}
+		System.out.println(minStudent);
 		
 	}
 }
