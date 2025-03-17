@@ -35,9 +35,8 @@ public class OO6 {
 										  		 int cost1 = prod1.price*prod1.qty;
 										  		 int cost2 = prod2.price*prod2.qty;
 										  		 return Integer.compare(cost1, cost2);
-										  	 });
-		
-		if(optProduct.isPresent()) {
+										  	 });		
+		if(optProduct.isPresent()) { // 判斷 optProduct 內是否有資料 ?
 			Product product = optProduct.get();
 			System.out.println(product);
 		} else {
