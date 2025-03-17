@@ -22,6 +22,7 @@ public class OO4 {
 		
 		System.out.println("-------------------");
 		int sum2 = Stream.of(students) // [John, 70]->[Mary, 40]->[Jack, 50]->[Rose, 90]->[Jean, 80]
+						  // mapToInt 將每一個元素"轉換"為 int
 						 .mapToInt(student -> student.score) // [70]->[40]->[50]->[90]->[80]
 						 .sum(); // 總和
 		System.out.printf("總分:%d 平均:%d%n", sum2, (sum2/students.length));
