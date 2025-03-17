@@ -24,6 +24,8 @@ public class OO5 {
 		System.out.printf("最大:%d%n", stat.getMax());
 		System.out.printf("最小:%d%n", stat.getMin());
 		System.out.printf("個數:%d%n", stat.getCount());
+		System.out.println("-------------------");
+		// 請問最高分與最低分的人名是 ?
 		
 	}
 }
