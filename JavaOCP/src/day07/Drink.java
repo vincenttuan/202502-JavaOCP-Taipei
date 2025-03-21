@@ -12,7 +12,8 @@ public class Drink {
 		this.price = price;
 		this.hot = hot;
 	}
-
+	
+	// 方法封裝
 	public String getName() {
 		return name;
 	}
@@ -35,6 +36,11 @@ public class Drink {
 
 	public void setHot(boolean hot) {
 		this.hot = hot;
+	}
+
+	@Override
+	public String toString() {
+		return "Drink [name=" + name + ", price=" + price + ", hot=" + hot + "]";
 	}
 	
 	
