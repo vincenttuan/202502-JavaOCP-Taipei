@@ -10,8 +10,9 @@ public class FastFoodStore {
 		Drink d1 = new Drink("可樂", 20, false);
 		Drink d2 = new Drink("咖啡", 30, true);
 		Drink d3 = new Drink("紅茶", 25, false);
-		
-		
+		System.out.println("== 單點菜單 ==========");
+		System.out.printf("%s%n%s%n%s%n", f1, f2, f3);
+		System.out.printf("%s%n%s%n%s%n", d1, d2, d3);
 		
 
 	}
