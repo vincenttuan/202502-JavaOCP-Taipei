@@ -14,6 +14,8 @@ public class FastFoodStore {
 		System.out.printf("%s%n%s%n%s%n", f1, f2, f3);
 		System.out.printf("%s%n%s%n%s%n", d1, d2, d3);
 		
+		// 組合餐
+		
 
 	}
 
