@@ -36,10 +36,11 @@ public class FastFoodStore {
 		for(Combo combo : combos) {
 			String comboName = combo.getName(); // 組合餐名
 			String fastFoodName = combo.getFastFood().getName(); // 主餐名
+			String hotOrCool = combo.getDrink().isHot() ? "熱" : "冰";
 			String drinkName = combo.getDrink().getName();
 			int comboPrice = combo.getPrice(); // 組合餐價格
 			
-			System.out.printf("%s(%s 冰%s) $%d%n", comboName, fastFoodName, drinkName, comboPrice);
+			System.out.printf("%s(%s %s%s) $%d%n", comboName, fastFoodName, hotOrCool, drinkName, comboPrice);
 			
 		}
 		
