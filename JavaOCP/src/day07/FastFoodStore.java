@@ -21,6 +21,18 @@ public class FastFoodStore {
 		Combo c3 = new Combo("三號餐", f3, d2);
 		System.out.println("== 組合餐菜單 =========");
 		System.out.printf("%s%n%s%n%s%n", c1, c2, c3);
+		
+		// (組合餐)購物車
+		Combo[] combos = {c1, c1, c2, c3, c3, c3};
+		// 請印出我買的組合餐名稱+價格與總價
+		// 一號餐 $70
+		// 一號餐 $70
+		// 二號餐 $85
+		// 三號餐 $105
+		// 三號餐 $105
+		// 三號餐 $105
+		// ----------
+		// 總價 540
 
 	}
 
