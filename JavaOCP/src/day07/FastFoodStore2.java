@@ -27,10 +27,25 @@ public class FastFoodStore2 {
 		// (單點+組合餐)購物車
 		System.out.println("== 購物車資料 =========");
 		Object[] cart = {f2, c1, d3};
+		int totalPrice = 0;
 		for(Object item : cart) {
-			System.out.println(item);
+			System.out.println(item.getClass().getSimpleName() + " => " + item);
+			int price = 0;
+			switch (item.getClass().getSimpleName()) { // 判斷型別
+				case "FastFood":
+					price = ((FastFood)item).getPrice(); // 將 item 從 Object 型別轉 FastFood
+					break;
+				case "Combo":
+					price = ((Combo)item).getPrice(); // 將 item 從 Object 型別轉 Combo
+					break;
+				case "Drink":
+					price = ((Drink)item).getPrice(); // 將 item 從 Object 型別轉 Drink
+					break;
+			}
+			//System.out.println(price);
+			totalPrice += price;
 		}
-		
+		System.out.printf("總價:$%d%n", totalPrice);
 	}
 
 }
