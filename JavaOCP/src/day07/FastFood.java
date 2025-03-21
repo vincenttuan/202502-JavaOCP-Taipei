@@ -33,5 +33,10 @@ public class FastFood {
 	public int getPrice() {
 		return price;
 	}
+
+	@Override
+	public String toString() {
+		return "FastFood [name=" + name + ", price=" + price + "]";
+	}
 	
 }
