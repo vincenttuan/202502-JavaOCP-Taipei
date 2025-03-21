@@ -24,6 +24,12 @@ public class FastFoodStore2 {
 		System.out.println("== 組合餐菜單 =========");
 		System.out.printf("%s%n%s%n%s%n", c1, c2, c3);
 		
+		// (單點+組合餐)購物車
+		System.out.println("== 購物車資料 =========");
+		Object[] cart = {f2, c1, d3};
+		for(Object item : cart) {
+			System.out.println(item);
+		}
 		
 	}
 
