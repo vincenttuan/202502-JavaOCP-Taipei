@@ -32,17 +32,18 @@ public class FastFoodStore {
 		// 三號餐(義大利麵 熱咖啡) $105
 		// 三號餐(義大利麵 熱咖啡) $105
 		// ----------
-		// 總價 540
+		// 總價 $540
+		int totalPrice = 0;
 		for(Combo combo : combos) {
 			String comboName = combo.getName(); // 組合餐名
 			String fastFoodName = combo.getFastFood().getName(); // 主餐名
 			String hotOrCool = combo.getDrink().isHot() ? "熱" : "冰";
 			String drinkName = combo.getDrink().getName();
 			int comboPrice = combo.getPrice(); // 組合餐價格
-			
+			totalPrice += comboPrice;
 			System.out.printf("%s(%s %s%s) $%d%n", comboName, fastFoodName, hotOrCool, drinkName, comboPrice);
-			
 		}
+		System.out.printf("總價 $%d%n", totalPrice);
 		
 	}
 
