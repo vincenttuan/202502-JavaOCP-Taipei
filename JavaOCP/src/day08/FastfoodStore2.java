@@ -6,6 +6,8 @@ public class FastfoodStore2 {
 		Drink drink = new Drink("可樂", 20, false);
 		hamburger.printInfo();
 		drink.printInfo();
+		//---------------------------------------------------
+		
 		
 	}
 }
