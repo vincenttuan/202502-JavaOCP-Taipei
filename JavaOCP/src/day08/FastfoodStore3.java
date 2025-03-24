@@ -27,5 +27,6 @@ public class FastfoodStore3 {
 			System.out.println("foods[0] 不可轉型成 Drink");
 		}
 		
+		
 	}
 }
