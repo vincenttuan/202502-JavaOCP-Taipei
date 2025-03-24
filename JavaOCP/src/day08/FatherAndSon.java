@@ -6,7 +6,10 @@ public class FatherAndSon {
 		Father father = new Father();
 		System.out.println(father.balance);
 		father.play();
-		
+		//----------------------------------
+		Son son = new Son();
+		System.out.println(son.balance);
+		son.play();
 	}
 
 }
