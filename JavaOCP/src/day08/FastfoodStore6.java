@@ -1,5 +1,7 @@
 package day08;
 
+import java.util.stream.Stream;
+
 public class FastfoodStore6 {
 	public static void main(String[] args) {
 		Hamburger hamburger1 = new Hamburger("大麥克", 81, 2);
@@ -25,5 +27,9 @@ public class FastfoodStore6 {
 				System.out.println(hamburger.getName());
 			}
 		}
+		// ------------------------------------------------
+		Stream.of(foods)
+			  .filter(food -> food instanceof Hamburger)
+			  .forEach(food -> System.out.println(food.getName()));
 	}
 }
