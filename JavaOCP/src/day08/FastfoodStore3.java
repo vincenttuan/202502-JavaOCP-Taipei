@@ -11,7 +11,21 @@ public class FastfoodStore3 {
 		//---------------------------------------------------
 		Hamburger[] hamburgers = {hamburger1, hamburger2, hamburger3};
 		Drink[] drinks = {drink1, drink2, drink3};
-		
+		// 多型
+		Food[] foods = {hamburger1, drink1, hamburger2, drink2, drink3, hamburger3};
+		System.out.println(foods[0].getName());
+		System.out.println(foods[0].getPrice());
+		//System.out.println(foods[0].getLevel()); // 錯誤
+		// 透過轉型
+		System.out.println(((Hamburger)foods[0]).getLevel()); // 利用轉型就可以呼叫 getLevel() 方法
+		// 透過轉型的風險
+		//System.out.println(((Drink)foods[0]).isHot()); // 可能會轉型失敗
+		// 正確的轉型應該透過 instanceof 來判斷
+		if(foods[0] instanceof Drink) {
+			System.out.println(((Drink)foods[0]).isHot()); // 放心去轉型
+		} else {
+			System.out.println("foods[0] 不可轉型成 Drink");
+		}
 		
 	}
 }
