@@ -1,5 +1,7 @@
 package day08;
 
+import java.util.stream.Stream;
+
 public class FastfoodStore4 {
 	public static void main(String[] args) {
 		Hamburger hamburger1 = new Hamburger("大麥克", 81, 2);
@@ -22,6 +24,13 @@ public class FastfoodStore4 {
 			}
 		}
 		System.out.println(sum1);
-		
+		//---------------------------------------------------
+		int sum2 = Stream.of(foods) // [Food, Food, Food, Food, Food, Food] 含有 Hamburger 與 Drink
+						 .filter(food -> food instanceof Drink)  // [Food, Food, Food] 可以轉成 Drink 的
+						 .map(food -> (Drink)food)               // [Drink, Drink, Drink] 轉成 Drink
+						 .filter(drink -> !drink.isHot())        // [Drink, Drink] 冷飲的 Drink
+						 .mapToInt(drink -> drink.getPrice())    // [20, 20] 冷飲的價格
+						 .sum(); // 總和
+		System.out.println(sum2);
 	}
 }
