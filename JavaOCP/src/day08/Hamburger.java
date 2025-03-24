@@ -11,6 +11,10 @@ public class Hamburger extends Food {
 		this.level = level;
 	}
 	
+	@Override
+	public void printInfo() {
+		System.out.printf("%d層%s $%d%n", getLevel(), getName(), getPrice());
+	}
 	
 	
 }
