@@ -4,6 +4,15 @@ public class Food {
 	private String name; // 名稱
 	private int price;   // 價格
 	
+	public Food() {
+		
+	}
+	
+	public Food(String name, int price) {
+		setName(name);
+		setPrice(price);
+	}
+	
 	public String getName() {
 		return name;
 	}
