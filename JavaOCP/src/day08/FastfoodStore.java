@@ -14,6 +14,9 @@ public class FastfoodStore {
 		drink.setHot(false);
 		//-------------------------------------
 		// 請印出這二項產品資料
+		// 大麥克2層 $70
+		// 冰可樂 $20
+		
 
 	}
 
