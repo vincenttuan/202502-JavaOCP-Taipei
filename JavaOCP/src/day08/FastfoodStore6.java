@@ -19,6 +19,11 @@ public class FastfoodStore6 {
 			}
 		}
 		// ------------------------------------------------
-		
+		for(Food food : foods) {
+			if(food instanceof Hamburger) {
+				Hamburger hamburger = (Hamburger)food;
+				System.out.println(hamburger.getName());
+			}
+		}
 	}
 }
