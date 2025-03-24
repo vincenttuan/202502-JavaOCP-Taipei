@@ -12,7 +12,13 @@ public class FastfoodStore6 {
 		// 多型
 		Food[] foods = {hamburger1, drink1, hamburger2, drink2, drink3, hamburger3};
 		// 透過分析 foods 請印出所有漢堡名稱
-		
+		for(int i=0;i<foods.length;i++) {
+			if(foods[i] instanceof Hamburger) {
+				Hamburger hamburger = (Hamburger)foods[i];
+				System.out.println(hamburger.getName());
+			}
+		}
+		// ------------------------------------------------
 		
 	}
 }
