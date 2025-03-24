@@ -8,8 +8,9 @@ public class Drink extends Food {
 	}
 	
 	public Drink(String name, int price, boolean hot) {
-		setName(name);
-		setPrice(price);
+		super(name, price);
+		//setName(name);
+		//setPrice(price);
 		setHot(hot);
 	}
 	
