@@ -2,7 +2,17 @@ package day08;
 
 public class Drink extends Food {
 	private boolean hot;   // 冷熱
-
+	
+	public Drink() {
+		
+	}
+	
+	public Drink(String name, int price, boolean hot) {
+		setName(name);
+		setPrice(price);
+		setHot(hot);
+	}
+	
 	public boolean isHot() {
 		return hot;
 	}
