@@ -17,5 +17,8 @@ public class Food {
 		this.price = price;
 	}
 	
+	public void printInfo() {
+		System.out.printf("%s $%d%n", name, price);
+	}
 	
 }
