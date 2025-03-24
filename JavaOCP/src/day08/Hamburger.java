@@ -8,8 +8,9 @@ public class Hamburger extends Food {
 	}
 	
 	public Hamburger(String name, int price, int level) {
-		setName(name);
-		setPrice(price);
+		super(name, price);
+		//setName(name);
+		//setPrice(price);
 		setLevel(level);
 		//this.level = level;
 	}
