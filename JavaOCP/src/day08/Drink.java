@@ -11,5 +11,9 @@ public class Drink extends Food {
 		this.hot = hot;
 	}
 	
+	@Override
+	public void printInfo() {
+		System.out.printf("%s%s $%d%n", isHot()?"熱":"冰", getName(), getPrice());
+	}
 	
 }
