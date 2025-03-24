@@ -12,7 +12,16 @@ public class FastfoodStore4 {
 		// 多型
 		Food[] foods = {hamburger1, drink1, hamburger2, drink2, drink3, hamburger3};
 		// 透過分析 foods 請計算出冷飲的總價為和 ?
-		
+		int sum1 = 0;
+		for(int i=0;i<foods.length;i++) {
+			if(foods[i] instanceof Drink) { // 判斷是否可以轉型
+				Drink drink = (Drink)foods[i]; // 轉型
+				if(!drink.isHot()) { // 冷飲
+					sum1 += drink.getPrice(); // 累加
+				}
+			}
+		}
+		System.out.println(sum1);
 		
 	}
 }
