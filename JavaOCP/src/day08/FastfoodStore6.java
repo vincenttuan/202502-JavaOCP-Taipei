@@ -16,15 +16,13 @@ public class FastfoodStore6 {
 		// 透過分析 foods 請印出所有漢堡名稱
 		for(int i=0;i<foods.length;i++) {
 			if(foods[i] instanceof Hamburger) {
-				Hamburger hamburger = (Hamburger)foods[i];
-				System.out.println(hamburger.getName());
+				System.out.println(foods[i].getName());
 			}
 		}
 		// ------------------------------------------------
 		for(Food food : foods) {
 			if(food instanceof Hamburger) {
-				Hamburger hamburger = (Hamburger)food;
-				System.out.println(hamburger.getName());
+				System.out.println(food.getName());
 			}
 		}
 		// ------------------------------------------------
