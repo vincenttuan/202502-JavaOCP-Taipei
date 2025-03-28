@@ -15,7 +15,13 @@ public class Main4 {
 		}
 		System.out.printf("薪資總和: %,d%n", totalSalary);
 		// 請問預算總合 = ?
-		
+		int totalBudget = 0;
+		for(Employee employee : employees) {
+			if(employee instanceof Manager) {
+				totalBudget += ((Manager)employee).getBudget();
+			}
+		}
+		System.out.printf("預算總和: %,d%n", totalBudget);
 	}
 
 }
