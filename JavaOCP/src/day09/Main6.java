@@ -40,6 +40,13 @@ public class Main6 {
 									   .sum();
 		
 		System.out.printf("股票總和: %,d%n", totalStockOptions2);
+		
+		int totalStockOptions3 = Stream.of(employees)
+									.mapToInt(emp -> emp instanceof Supervistor ? ((Supervistor)emp).getStockOptions() : 0)
+									.sum();
+
+		System.out.printf("股票總和: %,d%n", totalStockOptions3);
+
 	}
 
 }
