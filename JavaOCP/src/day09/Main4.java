@@ -9,7 +9,11 @@ public class Main4 {
 		
 		Employee[] employees = {employee1, employee2, employee3};
 		// 請問薪資總和 = ?
-		
+		int totalSalary = 0;
+		for(Employee employee : employees) {
+			totalSalary += employee.getSalary();
+		}
+		System.out.printf("薪資總和: %,d%n", totalSalary);
 	}
 
 }
