@@ -20,4 +20,13 @@ public class Checkout {
 	}
 	
 	
+	public static void main(String[] args) {
+		Checkout checkout = new Checkout();
+		checkout.submit(15);
+		checkout.submit("1111-2222-3333-4444", 15);
+		checkout.submit(5, 15);
+		checkout.submit();
+	}
+	
+	
 }
