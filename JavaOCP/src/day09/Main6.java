@@ -25,6 +25,9 @@ public class Main6 {
 								.sum();
 		
 		System.out.printf("預算總和: %,d%n", totalBudget);
+		
+		// 請問股票總合 = ? 使用 Stream 串流
+		
 	}
 
 }
