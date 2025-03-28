@@ -6,6 +6,7 @@ public class Tiger extends Cat {
 		System.out.println("Tiger 建構子");
 	}
 	
+	@Override
 	public void voice() {
 		System.out.println("吼~~~");
 	}
