@@ -5,4 +5,8 @@ public class Cat extends Animal {
 		super("貓");
 		System.out.println("Cat 建構子");
 	}
+	
+	public void voice() {
+		System.out.println("喵~~~");
+	}
 }
