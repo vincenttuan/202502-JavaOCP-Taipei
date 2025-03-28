@@ -1,8 +1,8 @@
 package p1;
 
-public class Son extends Father {
+public class Son1 extends Father {
 	
-	public Son() {
+	public Son1() {
 		System.out.println(super.banana);
 		System.out.println(super.cherry);
 		System.out.println(super.dragon);
