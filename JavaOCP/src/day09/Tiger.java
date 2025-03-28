@@ -5,9 +5,10 @@ public class Tiger extends Cat {
 		super("老虎");
 		System.out.println("Tiger 建構子");
 	}
-	
+
 	@Override
 	public void voice() {
 		System.out.println("吼~~~");
 	}
+	
 }
