@@ -14,6 +14,8 @@ public class Main4 {
 			totalSalary += employee.getSalary();
 		}
 		System.out.printf("薪資總和: %,d%n", totalSalary);
+		// 請問預算總合 = ?
+		
 	}
 
 }
