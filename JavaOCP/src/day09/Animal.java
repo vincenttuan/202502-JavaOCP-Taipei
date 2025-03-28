@@ -3,7 +3,8 @@ package day09;
 public class Animal {
 	private String name;
 	
-	public Animal() {
+	public Animal(String name) {
+		this.name = name;
 		System.out.println("Animal 建構子");
 	}
 	
@@ -14,6 +15,5 @@ public class Animal {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	
 }
