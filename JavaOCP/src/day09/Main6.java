@@ -27,7 +27,19 @@ public class Main6 {
 		System.out.printf("預算總和: %,d%n", totalBudget);
 		
 		// 請問股票總合 = ? 使用 Stream 串流
+		int totalStockOptions = Stream.of(employees)
+									  .filter(emp -> emp instanceof Supervistor)
+									  .map(emp -> (Supervistor)emp)
+									  .mapToInt(su -> su.getStockOptions())
+									  .sum();
+		System.out.printf("股票總和: %,d%n", totalStockOptions);
 		
+		int totalStockOptions2 = Stream.of(employees)
+									   .filter(emp -> emp instanceof Supervistor)
+									   .mapToInt(emp -> ((Supervistor)emp).getStockOptions())
+									   .sum();
+		
+		System.out.printf("股票總和: %,d%n", totalStockOptions2);
 	}
 
 }
