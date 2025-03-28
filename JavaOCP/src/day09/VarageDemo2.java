@@ -7,6 +7,7 @@ public class VarageDemo2 {
 		System.out.println(calc(10, 20, 30));
 		int[] values = {10, 20, 30, 40, 50};
 		System.out.println(calc(values));
+		System.out.println(calc());
 	}
 	
 	public static int calc(int... values) {
