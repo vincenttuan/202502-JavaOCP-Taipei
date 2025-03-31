@@ -1,12 +1,6 @@
 package day10;
 
-public class BMIB implements BMI {
-
-	@Override
-	public double calcAndGet(double h, double w) {
-		double bmiValue = w / Math.pow(h/100, 2);
-		return bmiValue;
-	}
+public class BMIB extends BMISemi {
 
 	@Override
 	public String getResult(double bmiValue) {
