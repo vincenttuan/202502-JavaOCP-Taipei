@@ -1,8 +1,9 @@
 package day10;
 
+// 實現類
 public class Tea implements Drink {
-	private String name;
-	private int price;
+	private String name; // 保存品名
+	private int price; // 保存價格
 	
 	@Override
 	public String getName() {
