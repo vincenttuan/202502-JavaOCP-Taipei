@@ -9,8 +9,8 @@ public class BMIA implements BMI {
 	}
 
 	@Override
-	public String getResult(double bmi) {
-		String result = bmi <= 18 ? "過輕" : bmi > 23 ? "過重" : "正常";
+	public String getResult(double bmiValue) {
+		String result = bmiValue <= 18 ? "過輕" : bmiValue > 23 ? "過重" : "正常";
 		return result;
 	}
 	

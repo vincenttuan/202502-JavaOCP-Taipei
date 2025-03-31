@@ -6,6 +6,6 @@ public interface BMI {
 	public double calcAndGet(double h, double w);
 	
 	// 判斷 BMI 結果的方法
-	public String getResult(double bmi);
+	public String getResult(double bmiValue);
 	
 }
