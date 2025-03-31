@@ -7,5 +7,5 @@ public interface Car {
 	
 	// 方法(public abstract 無實作)
 	String getName(); // public abstract String getName();
-	String getPrice(); // public abstract String getPrice();
+	int getPrice(); // public abstract String getPrice();
 }
