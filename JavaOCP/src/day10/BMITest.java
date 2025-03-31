@@ -6,6 +6,9 @@ public class BMITest {
 		BMI bmi = new BMIA();
 		double bmiValue = bmi.calcAndGet(170.0, 70.0);
 		System.out.println(bmiValue);
+		String result = bmi.getResult(bmiValue);
+		System.out.println(result);
+		//---------------------------------------------
 	}
 
 }
