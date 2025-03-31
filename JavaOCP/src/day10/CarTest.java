@@ -12,6 +12,7 @@ public class CarTest {
 		for(Car car : cars) {
 			System.out.printf("品牌 %-6s 價格 $%,9d%n", car.getName(), car.getPrice());
 		}
+		// 總價與平均
 
 	}
 
