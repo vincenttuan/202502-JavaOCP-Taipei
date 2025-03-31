@@ -8,6 +8,10 @@ public class CarTest {
 		Car honda = new Honda("Honda", 110_0000);
 		Car toyota = new Toyota("Toyota", 90_0000);
 		
+		Car[] cars = {benz, bmw, honda, toyota};
+		for(Car car : cars) {
+			System.out.printf("品牌 %-6s 價格 $%,9d%n", car.getName(), car.getPrice());
+		}
 
 	}
 
