@@ -6,6 +6,10 @@ public abstract class DrinkSemi implements Drink {
 	private String name; // 保存品名
 	private int price; // 保存價格
 	
+	//-- 抽象方法 ----------------------------
+	public abstract String getOrigin();
+	//--------------------------------------
+	
 	@Override
 	public String getName() {
 		return name;
