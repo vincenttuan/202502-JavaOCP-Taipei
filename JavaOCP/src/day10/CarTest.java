@@ -16,8 +16,11 @@ public class CarTest {
 			System.out.printf("品牌 %-6s 價格 $%,9d%n", car.getName(), car.getPrice());
 		}
 		// 總價與平均
-		int sum = Stream.of(cars).mapToInt(car -> car.getPrice()).sum();
-		double avg = Stream.of(cars).mapToInt(car -> car.getPrice()).average().getAsDouble();
+		//int sum = Stream.of(cars).mapToInt(car -> car.getPrice()).sum();
+		int sum = Stream.of(cars).mapToInt(Car::getPrice).sum();
+		
+		//double avg = Stream.of(cars).mapToInt(car -> car.getPrice()).average().getAsDouble();
+		double avg = Stream.of(cars).mapToInt(Car::getPrice).average().getAsDouble();
 		
 		System.out.printf("總價:$%,d 平均:$%,.0f", sum, avg);
 		
