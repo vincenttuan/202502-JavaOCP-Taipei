@@ -1,26 +1,31 @@
 package day11;
 
 // 抽象商品類別
-public class AbstractProduct implements Product {
-
+public abstract class AbstractProduct implements Product {
+	
+	private String name; // 商品名稱
+	private int price; // 商品價格
+	
+	public AbstractProduct(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+	
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 	@Override
 	public int getPrice() {
-		// TODO Auto-generated method stub
-		return 0;
+		return price;
 	}
 
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-		
+		System.out.printf("商品名稱:%s 價格:$%d%n", name, price);
 	}
 	
-	
+	public abstract void applyDiscount(); // 進行折扣
 	
 }
