@@ -37,6 +37,8 @@ public class ShoppingCart2 {
 			total3 += product.getPrice();
 		}
 		System.out.printf("結帳金額(買手機有折扣,買衣服原價):$%,d%n", total3);
+		
+		// 請計算出結帳金額(買 Apple 手機才有折扣,買衣服原價) = ?
 	}
 
 }

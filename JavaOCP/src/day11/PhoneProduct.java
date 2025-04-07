@@ -8,7 +8,11 @@ public class PhoneProduct extends AbstractProduct {
 		super(name, price);
 		this.brand = brand;
 	}
-
+	
+	public String getBrand() {
+		return brand;
+	}
+	
 	@Override
 	public void applyDiscount() {
 		// 手機有 10% 的折扣 
