@@ -18,6 +18,7 @@ public class ShoppingCart2 {
 		}
 		System.out.printf("結帳金額(不折扣):$%,d%n", total);
 		
+		/*
 		// 請計算出結帳金額(折扣) = ?
 		int total2 = 0;
 		for(Product product : products) {
@@ -26,6 +27,16 @@ public class ShoppingCart2 {
 			total2 += product.getPrice();
 		}
 		System.out.printf("結帳金額(折扣):$%,d%n", total2);
+		*/
+		// 請計算出結帳金額(買手機有折扣,買衣服原價) = ?
+		int total3 = 0;
+		for(Product product : products) {
+			if(product instanceof PhoneProduct) {
+				((PhoneProduct)product).applyDiscount();
+			}
+			total3 += product.getPrice();
+		}
+		System.out.printf("結帳金額(買手機有折扣,買衣服原價):$%,d%n", total3);
 	}
 
 }
