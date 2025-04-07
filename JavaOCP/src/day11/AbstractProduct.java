@@ -3,8 +3,8 @@ package day11;
 // 抽象商品類別
 public abstract class AbstractProduct implements Product {
 	
-	private String name; // 商品名稱
-	private int price; // 商品價格
+	protected String name; // 商品名稱
+	protected int price; // 商品價格
 	
 	public AbstractProduct(String name, int price) {
 		this.name = name;
