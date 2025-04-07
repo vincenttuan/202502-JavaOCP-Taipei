@@ -12,8 +12,20 @@ public class ShoppingCart2 {
 		Product[] products = {p1, p2, p3, p4};
 		
 		// 請計算出結帳金額(不折扣) = ?
+		int total = 0;
+		for(Product product : products) {
+			total += product.getPrice();
+		}
+		System.out.printf("結帳金額(不折扣):$%,d%n", total);
 		
-		
+		// 請計算出結帳金額(折扣) = ?
+		int total2 = 0;
+		for(Product product : products) {
+			// 執行折扣程序
+			((AbstractProduct)product).applyDiscount();
+			total2 += product.getPrice();
+		}
+		System.out.printf("結帳金額(折扣):$%,d%n", total2);
 	}
 
 }
