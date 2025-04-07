@@ -18,7 +18,7 @@ public class ClothingProduct extends AbstractProduct {
 			price = 0;
 		}
 		
-		System.out.printf("商品名稱:%s(%s) 折扣後價格:$%d%n", name, size, price);
+		System.out.printf("商品名稱:%s(%s) 折扣後價格:$%,d%n", name, size, price);
 	}
 	
 }

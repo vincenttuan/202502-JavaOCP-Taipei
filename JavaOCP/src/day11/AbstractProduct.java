@@ -23,7 +23,7 @@ public abstract class AbstractProduct implements Product {
 
 	@Override
 	public void display() {
-		System.out.printf("商品名稱:%s 價格:$%d%n", name, price);
+		System.out.printf("商品名稱:%s 價格:$%,d%n", name, price);
 	}
 	
 	public abstract void applyDiscount(); // 進行折扣

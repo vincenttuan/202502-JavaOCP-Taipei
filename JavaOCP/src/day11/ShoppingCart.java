@@ -1,5 +1,7 @@
 package day11;
 
+import java.nio.channels.Pipe.SourceChannel;
+
 public class ShoppingCart {
 
 	public static void main(String[] args) {
@@ -10,7 +12,23 @@ public class ShoppingCart {
 		
 		phone1.display();
 		phone1.applyDiscount();
+		System.out.println(phone1.getPrice());
+		System.out.println();
 		
+		phone2.display();
+		phone2.applyDiscount();
+		System.out.println(phone2.getPrice());
+		System.out.println();
+		
+		clothing1.display();
+		clothing1.applyDiscount();
+		System.out.println(clothing1.getPrice());
+		System.out.println();
+		
+		clothing2.display();
+		clothing2.applyDiscount();
+		System.out.println(clothing2.getPrice());
+		System.out.println();
 		
 	}
 
