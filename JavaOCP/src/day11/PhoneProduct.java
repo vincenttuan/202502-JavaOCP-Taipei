@@ -13,7 +13,7 @@ public class PhoneProduct extends AbstractProduct {
 	public void applyDiscount() {
 		// 手機有 10% 的折扣 
 		price = (int)(price * 0.9);
-		System.out.printf("商品名稱:%s 折扣後價格:$%d%n", name, price);
+		System.out.printf("商品名稱:%s(%s) 折扣後價格:$%d%n", name, brand, price);
 	}
 	
 }
