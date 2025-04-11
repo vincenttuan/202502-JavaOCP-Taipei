@@ -19,6 +19,8 @@ public class PersonTest {
 		};
 		System.out.println(p2.getName());
 		
+		Person p3 = () -> "小陳";
+		System.out.println(p3.getName());
 	}
 
 }
