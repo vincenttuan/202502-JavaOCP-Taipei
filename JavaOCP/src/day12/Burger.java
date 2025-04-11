@@ -3,6 +3,21 @@ package day12;
 // 漢堡(外部類別)
 public class Burger {
 	
+	private Meat meat;
+	private Egg egg;
+	
+	public Burger(String meatType, int eggCount) {
+		this.meat = new Meat(meatType);
+		this.egg = new Egg(eggCount);
+	}
+	
+	public void describe() {
+		System.out.println("Bueger 內有:");
+		meat.describe();
+		egg.describe();
+	}
+	
+	//-----------------------------------------------
 	// 肉(內部類別)
 	public class Meat {
 		private String type;
