@@ -26,7 +26,13 @@ public class Coffee {
 	
 	// 糖(內部類別)
 	class Sugar {
-		
+		private int level; // 幾分糖(0~10)
+		public Sugar(int level) {
+			this.level = level;
+		}
+		void describe() {
+			System.out.println("Sugar: " + level + " 分");
+		}
 	}
 	
 }
