@@ -10,7 +10,9 @@ public class BurgerTest {
 		burger2.addEgg();
 		burger2.addEgg();
 		burger2.describe();
-		
+		System.out.println("--------");
+		Burger.Meat meat = new Burger().new Meat("漢堡肉");
+		meat.describe();
 	}
 
 }

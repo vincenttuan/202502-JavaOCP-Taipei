@@ -6,6 +6,10 @@ public class Burger {
 	private Meat meat;
 	private Egg egg;
 	
+	public Burger() {
+		
+	}
+	
 	public Burger(String meatType, int eggCount) {
 		this.meat = new Meat(meatType);
 		this.egg = new Egg(eggCount);
@@ -25,6 +29,7 @@ public class Burger {
 	// 肉(內部類別)
 	public class Meat {
 		private String type;
+		
 		public Meat(String type) {
 			this.type = type;
 		}
