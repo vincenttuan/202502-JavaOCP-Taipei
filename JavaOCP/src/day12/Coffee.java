@@ -1,9 +1,29 @@
 package day12;
 
 public class Coffee {
+	private Bean bean;
+	private Milk milk;
+	private Sugar sugar;
+	
+	Coffee() {
+		
+	}
+	
+	Coffee(Bean bean, Milk milk, Sugar sugar) {
+		this.bean = bean;
+		this.milk = milk;
+		this.sugar = sugar;
+	}
+	
+	void describe() {
+		System.out.println("Coffee 內有:");
+		bean.describe();
+		milk.describe();
+		sugar.describe();
+	}
 	
 	// 咖啡豆(內部類別)
-	class Bean {
+ 	class Bean {
 		private String type;
 		Bean(String type) {
 			this.type = type;
