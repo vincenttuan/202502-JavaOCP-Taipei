@@ -9,10 +9,10 @@ public class Coffee {
 		
 	}
 	
-	Coffee(Bean bean, Milk milk, Sugar sugar) {
-		this.bean = bean;
-		this.milk = milk;
-		this.sugar = sugar;
+	Coffee(String type, int ml, int level) {
+		this.bean = new Bean(type);
+		this.milk = new Milk(ml);
+		this.sugar = new Sugar(level);
 	}
 	
 	void describe() {
