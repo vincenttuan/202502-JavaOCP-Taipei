@@ -1,5 +1,5 @@
 package day12;
 
 public interface Person {
-	String getName(); // 人名
+	public String getName(); // 人名
 }
