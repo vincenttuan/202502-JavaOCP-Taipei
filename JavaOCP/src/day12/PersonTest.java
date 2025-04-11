@@ -10,7 +10,11 @@ public class PersonTest {
 			}
 		};
 		System.out.println(p1.getName());
-
+		//-------------------------------
+		// 因為該 Person interface 只有一個待實作的方法
+		// 因此該 interface 也稱為 @FunctionalInterface
+		// 所以可以使用 lambda 語法 !
+		
 	}
 
 }
