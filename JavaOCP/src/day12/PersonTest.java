@@ -1,5 +1,7 @@
 package day12;
 
+import java.util.stream.Stream;
+
 public class PersonTest {
 
 	public static void main(String[] args) {
@@ -21,6 +23,20 @@ public class PersonTest {
 		
 		Person p3 = () -> "小陳";
 		System.out.println(p3.getName());
+		//-------------------------------
+		Person[] persons = {p1, p2, p3};
+		for(Person person : persons) {
+			System.out.println(person.getName());
+		}
+		//-------------------------------
+		Stream.of(persons)
+			  .forEach(person -> {
+				  System.out.println(person.getName());  
+			  });
+		//-------------------------------
+		Stream.of(persons)
+		  	  .forEach(person -> System.out.println(person.getName()));
+		
 	}
 
 }
