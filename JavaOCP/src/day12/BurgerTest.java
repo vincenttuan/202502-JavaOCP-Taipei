@@ -13,6 +13,8 @@ public class BurgerTest {
 		System.out.println("--------");
 		Burger.Meat meat = new Burger().new Meat("漢堡肉");
 		meat.describe();
+		Burger.Egg egg = new Burger().new Egg(2);
+		egg.describe();
 	}
 
 }
