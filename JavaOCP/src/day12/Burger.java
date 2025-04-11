@@ -11,6 +11,10 @@ public class Burger {
 		this.egg = new Egg(eggCount);
 	}
 	
+	public void addEgg() {
+		egg.addOne();
+	}
+	
 	public void describe() {
 		System.out.println("Bueger 內有:");
 		meat.describe();
