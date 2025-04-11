@@ -1,11 +1,12 @@
 package day12;
 
+// 汽車-外部類別
 public class Car {
 	
 	// 啟動引擎
 	public void startEngine() {
 		System.out.println("啟動");
-		// 引擎方法內部類別
+		// 引擎-方法內部類別
 		class Engine {
 			void run() {
 				System.out.println("引擎運轉");
