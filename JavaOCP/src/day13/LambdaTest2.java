@@ -6,7 +6,11 @@ public class LambdaTest2 {
 
 	public static void main(String[] args) {
 		int[] scores = {90, 45, 65, 80, 35};
+		
 		filterScore(scores, (score) -> score >= 60);
+		
+		Check checkLowPass = (score) -> score <= 40;
+		filterScore(scores, checkLowPass);
 	}
 	
 	public static void filterScore(int[] scores, Check check) {
