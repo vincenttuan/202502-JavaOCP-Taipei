@@ -41,7 +41,4 @@ public class LambdaTest {
 				 .forEach(score -> System.out.println(score));
 				
 	}
-	
-	
-
 }
