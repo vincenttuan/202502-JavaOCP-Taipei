@@ -20,7 +20,12 @@ public class LambdaTest {
 		IntStream.of(scores)
 				 .filter(score -> checkPass.test(score))
 				 .forEach(score -> System.out.println(score));
-		
+		System.out.println("----");
+		// 過濾出不及格分數並逐一輸出
+		IntStream.of(scores)
+				 .filter(score -> checkNonPass.test(score))
+				 .forEach(score -> System.out.println(score));
+				
 	}
 	
 	
