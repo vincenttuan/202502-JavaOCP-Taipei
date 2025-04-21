@@ -13,16 +13,14 @@ public class PaymentMethodService {
 	public static void pay2(PaymentMethod2 method) {
 		switch (method) {
 			case CASH:
-				System.out.println("進行人工" + method);
+				System.out.println("進行人工" + method.getValue());
 				break;
 			case CREDIT_CARD:
-				System.out.println("進行刷卡" + method);
+				System.out.println("進行刷卡" + method.getValue());
 				break;
 			case MOBILE_PAY:
-				System.out.println("進行掃描" + method);
+				System.out.println("進行掃描" + method.getValue());
 				break;
-			default:
-				System.out.println("錯誤的支付: " + method);
 		}
 	}
 	
