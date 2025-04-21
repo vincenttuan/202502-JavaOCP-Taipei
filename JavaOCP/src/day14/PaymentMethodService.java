@@ -10,6 +10,22 @@ public class PaymentMethodService {
 		pay("他的卡");
 	}
 	
+	public static void pay2(PaymentMethod2 method) {
+		switch (method) {
+			case CASH:
+				System.out.println("進行人工" + method);
+				break;
+			case CREDIT_CARD:
+				System.out.println("進行刷卡" + method);
+				break;
+			case MOBILE_PAY:
+				System.out.println("進行掃描" + method);
+				break;
+			default:
+				System.out.println("錯誤的支付: " + method);
+		}
+	}
+	
 	public static void pay(String method) {
 		switch (method) {
 			case PaymentMethod.CASH:
