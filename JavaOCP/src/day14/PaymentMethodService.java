@@ -5,6 +5,9 @@ public class PaymentMethodService {
 		pay(PaymentMethod.CASH);
 		pay("現金支付");
 		pay("我的臉");
+		pay("我的手");
+		pay("我的腳");
+		pay("他的卡");
 	}
 	
 	public static void pay(String method) {
