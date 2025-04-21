@@ -3,9 +3,9 @@ package day14;
 // 糖果工廠
 public class CandyFactory {
 	
-	private String factoryName = "台北糖果工廠";
+	private String factoryName = "台北糖果工廠"; // 物件成員
 	
-	// 糖果 (static inner class, 不可取用外部類別的資源, 可以有類別(static)成員)
+	// 糖果 (static inner class, 不可取用外部類別的物件成員, 可以有類別(static)成員)
 	public static class Candy {
 		private String name; // 物件變數
 		private static int price = 100; // 類別變數
@@ -19,7 +19,7 @@ public class CandyFactory {
 		}
 	}
 	
-	// 糖果機 (inner class, 可以取用外部類別的資源, 不可以有類別(static)成員)
+	// 糖果機 (inner class, 可以取用外部類別的物件成員, 不可以有類別(static)成員)
 	public class Machine {
 		
 		public void display() {
