@@ -2,12 +2,17 @@ package day14;
 
 public class PaymentMethodService {
 	public static void main(String[] args) {
+		/*
 		pay(PaymentMethod.CASH);
 		pay("現金支付");
 		pay("我的臉");
 		pay("我的手");
 		pay("我的腳");
 		pay("他的卡");
+		*/
+		pay2(PaymentMethod2.CASH);
+		pay2(PaymentMethod2.CREDIT_CARD);
+		pay2(PaymentMethod2.MOBILE_PAY);
 	}
 	
 	public static void pay2(PaymentMethod2 method) {
