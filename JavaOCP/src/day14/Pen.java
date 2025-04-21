@@ -21,6 +21,11 @@ public class Pen {
 		*/
 		return color.equals(pen.color) && price == pen.price;
 	}
+	
+	@Override
+	public int hashCode() {
+		return 7 * 23 * price + color.hashCode();
+	}
 
 	@Override
 	public String toString() {
