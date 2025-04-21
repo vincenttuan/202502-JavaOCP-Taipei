@@ -2,7 +2,9 @@ package day14;
 
 public class PaymentMethodService {
 	public static void main(String[] args) {
-		
+		pay(PaymentMethod.CASH);
+		pay("現金支付");
+		pay("我的臉");
 	}
 	
 	public static void pay(String method) {
