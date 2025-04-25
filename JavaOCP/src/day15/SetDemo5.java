@@ -1,6 +1,7 @@
 package day15;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class SetDemo5 {
@@ -24,10 +25,17 @@ public class SetDemo5 {
 		}
 		
 		// 總分與平均分數 = ?
+		int totalScore = students.stream().mapToInt(Student::getScore).sum();
+		double averageScore = students.stream().mapToInt(Student::getScore).average().getAsDouble();
+		System.out.printf("總分:%d 平均:%.1f%n", totalScore, averageScore);
 		
 		// 最高分是誰 ?
-		
-
+		Optional<Student> highest = students.stream()
+											.max((s1, s2) -> Integer.compare(s1.getScore(), s2.getScore()));
+													
+		highest.ifPresent(student -> {
+			System.out.printf("最高分是:%s 分數:%d%n", student.getName(), student.getScore());
+		});
 	}
 
 }
