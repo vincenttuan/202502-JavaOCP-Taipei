@@ -23,6 +23,7 @@ public class SetDemo5 {
 			System.out.printf("%s 不在學生名單中%n", name);
 		}
 		
+		// 總分與平均分數 = ?
 
 	}
 
