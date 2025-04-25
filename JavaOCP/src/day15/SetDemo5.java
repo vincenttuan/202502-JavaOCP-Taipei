@@ -15,7 +15,7 @@ public class SetDemo5 {
 		students.add(new Student(5, "Jean", 43, 163.5, 52.0));
 		
 		// 請問 students 學生名單中是否有 "Rose" 學生
-		String name = "Mary";
+		String name = "Rose";
 		boolean hasName = students.stream()
 								  .anyMatch(student -> student.getName().equals(name));
 		if(hasName) {
