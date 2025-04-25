@@ -3,6 +3,7 @@ package day15;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.jar.Attributes.Name;
 
 public class SetDemo4 {
@@ -34,6 +35,18 @@ public class SetDemo4 {
 		System.out.println("您最近點過的商品:");
 		//shopping.forEach(p -> System.out.println(p));
 		shopping.forEach(System.out::println); // :: 方法參考
+		
+		// TreeSet: 自動排序(預設小->大: 自然排序)
+		Set<Integer> scores = new TreeSet<>();
+		scores.add(85);
+		scores.add(92);
+		scores.add(76);
+		scores.add(95);
+		
+		System.out.println("列出所有分數-自動排序(預設小->大)");
+		scores.forEach(System.out::println);
+		
+		
 		
 		
 		
