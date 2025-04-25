@@ -1,5 +1,6 @@
 package day15;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -37,7 +38,9 @@ public class SetDemo4 {
 		shopping.forEach(System.out::println); // :: 方法參考
 		
 		// TreeSet: 自動排序(預設小->大: 自然排序)
-		Set<Integer> scores = new TreeSet<>();
+		Comparator<Integer> comparator = (o1, o2) -> o2 - o1; // 後-前: 由大到小
+		//Comparator<Integer> comparator = (o1, o2) -> o1 - o2; // 前-後: 由小到大
+		Set<Integer> scores = new TreeSet<>(comparator);
 		scores.add(85);
 		scores.add(92);
 		scores.add(76);
