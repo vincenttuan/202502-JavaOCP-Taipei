@@ -1,12 +1,14 @@
 package day15;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ListDemo1 {
 
 	public static void main(String[] args) {
-		List<Integer> scores = new ArrayList<>();
+		//List<Integer> scores = new ArrayList<>();
+		List<Integer> scores = new LinkedList<>();
 		scores.add(95);
 		scores.add(88);
 		scores.add(100);
@@ -23,9 +25,14 @@ public class ListDemo1 {
 		System.out.println(scores);
 		scores.remove(Integer.valueOf(45)); // 刪除內容物是45的資料
 		System.out.println(scores);
-		
-		
-		
+		// 尋訪元素
+		for(int i=0;i<scores.size();i++) {
+			System.out.println(scores.get(i));
+		}
+		System.out.println("-------");
+		for(int i=scores.size()-1;i>=0;i--) {
+			System.out.println(scores.get(i));
+		}
 	}
 
 }
