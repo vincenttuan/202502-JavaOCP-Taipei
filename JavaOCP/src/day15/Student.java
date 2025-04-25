@@ -1,0 +1,10 @@
+package day15;
+
+public class Student {
+	private int id; // 學號
+	private String name; // 姓名
+	private int score; // 成績
+	private double height; // 身高
+	private double weight; // 體重
+	
+}
