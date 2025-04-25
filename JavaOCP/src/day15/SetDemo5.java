@@ -27,8 +27,6 @@ public class SetDemo5 {
 		
 		// 最高分是誰 ?
 		
-		// 誰的 bmi 最低 ? 數值是 ?
-		
 
 	}
 
