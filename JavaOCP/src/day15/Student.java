@@ -14,4 +14,7 @@ public class Student {
 	private double height; // 身高
 	private double weight; // 體重
 	
+	public double getBmi() {
+		return weight / Math.pow(height/100, 2);
+	}
 }

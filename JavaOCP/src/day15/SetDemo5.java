@@ -36,6 +36,9 @@ public class SetDemo5 {
 		highest.ifPresent(student -> {
 			System.out.printf("最高分是:%s 分數:%d%n", student.getName(), student.getScore());
 		});
+		
+		// BMI 誰最低 ?
+		
 	}
 
 }
