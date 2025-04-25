@@ -3,6 +3,17 @@
   <groupId>JavaOCP</groupId>
   <artifactId>JavaOCP</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  	
+  	<dependency>
+    	<groupId>org.projectlombok</groupId>
+    	<artifactId>lombok</artifactId>
+    	<version>1.18.38</version>
+	</dependency>
+  
+  </dependencies>
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
