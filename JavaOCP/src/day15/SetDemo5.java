@@ -38,6 +38,12 @@ public class SetDemo5 {
 		});
 		
 		// BMI 誰最低 ?
+		Optional<Student> lowest = students.stream()
+										   .min((s1, s2) -> Double.compare(s1.getBmi(), s2.getBmi()));
+		lowest.ifPresent(student -> {
+			System.out.printf("BMI最低的是:%s 數值:%.1f%n", student.getName(), student.getBmi());
+		});
+		
 		
 	}
 
