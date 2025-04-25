@@ -1,5 +1,12 @@
 package day15;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
 	private int id; // 學號
 	private String name; // 姓名
