@@ -1,7 +1,9 @@
 package day16;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapDemo1 {
 	
@@ -25,6 +27,14 @@ public class MapDemo1 {
 		} else {
 			System.out.println("此人不存在");
 		}
+		
+		// 印出所有學生
+		Set<String> names = scores.keySet(); // 取出所有 key 值 
+		System.out.println(names);
+		// 印出所有分數
+		Collection<Integer> allScores = scores.values(); // 取出所有 value 值 
+		System.out.println(allScores);
+		
 		
 	}
 	
