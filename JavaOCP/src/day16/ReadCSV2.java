@@ -41,9 +41,6 @@ public class ReadCSV2 {
 			}
 		}
 		System.out.printf("跑最快的是 %s, 成績: %.2f 秒%n", bestName, bestScore);
-		
-		
-		
 	}
 
 }
