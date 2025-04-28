@@ -13,8 +13,16 @@ public class MapDemo2 {
 		studentScores.put("Amy", List.of(92, 91, 88, 85));
 		studentScores.put("John", List.of(76, 78, 70, 80));
 		System.out.println(studentScores);
-		
-		
+		// 每一位學生的平均分數為何 ?
+		for(Map.Entry<String, List<Integer>> entry : studentScores.entrySet()) {
+			String name = entry.getKey(); // 姓名
+			List<Integer> scores = entry.getValue(); // 成績集合
+			
+			//double average = scores.stream().mapToInt(score -> score.intValue()).average().orElse(0);
+			//double average = scores.stream().mapToInt(score -> score).average().orElse(0);
+			double average = scores.stream().mapToInt(Integer::intValue).average().orElse(0);
+			System.out.printf("姓名: %s 平均: %.2f%n", name, average);
+		}
 	}
 
 }
