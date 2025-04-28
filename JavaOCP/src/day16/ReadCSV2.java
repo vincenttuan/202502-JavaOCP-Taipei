@@ -19,7 +19,8 @@ public class ReadCSV2 {
 		System.out.println(filePath + " 檔案存在!");
 		
 		List<Sportsman> sportsmans = Files.lines(filePath)
-				.map(line -> new Sportsman(line))
+				//.map(line -> new Sportsman(line))
+				.map(Sportsman::new)
 				.collect(Collectors.toList());
 		
 		sportsmans.forEach(sportsman -> {
