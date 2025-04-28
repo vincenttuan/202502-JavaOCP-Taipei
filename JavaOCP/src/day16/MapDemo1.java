@@ -35,6 +35,10 @@ public class MapDemo1 {
 		Collection<Integer> allScores = scores.values(); // 取出所有 value 值 
 		System.out.println(allScores);
 		
+		// 列出所有學生與成績
+		for(Map.Entry<String, Integer> entry : scores.entrySet()) {
+			System.out.printf("姓名: %s 成績: %d%n", entry.getKey(), entry.getValue());
+		}
 		
 	}
 	
