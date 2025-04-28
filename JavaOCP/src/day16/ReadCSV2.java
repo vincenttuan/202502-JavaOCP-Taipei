@@ -27,6 +27,23 @@ public class ReadCSV2 {
 			System.out.printf("%s 平均: %.2f%n", sportsman.getName(), sportsman.getAverage());
 		});
 		
+		// 找出全場最低的成績及對應的選手姓名
+		double bestScore = Double.MAX_VALUE; // 最低的成績
+		String bestName = null; // 選手姓名
+		
+		// 利用替換法
+		for(Sportsman sportsman : sportsmans) {
+			for(double score : sportsman.getScores()) {
+				if(score < bestScore) {
+					bestScore = score;
+					bestName = sportsman.getName();
+				}
+			}
+		}
+		System.out.printf("跑最快的是 %s, 成績: %.2f 秒%n", bestName, bestScore);
+		
+		
+		
 	}
 
 }
