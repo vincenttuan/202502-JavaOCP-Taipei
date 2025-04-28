@@ -16,6 +16,15 @@ public class MapDemo1 {
 		scores.put("Rose", 66);
 		System.out.println(scores);
 		
+		// 查詢 Amy 的成績
+		System.out.println("Amy 的成績: " + scores.get("Amy"));
+		
+		// 判斷 Amy 是否存在, 若存在則印出成績
+		if(scores.containsKey("Amy")) {
+			System.out.println("Amy 的成績: " + scores.get("Amy"));
+		} else {
+			System.out.println("此人不存在");
+		}
 		
 	}
 	
