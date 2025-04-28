@@ -18,4 +18,19 @@ public class Sportsman {
 		}
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
+	public List<Double> getScores() {
+		return scores;
+	}
+	
+	// 計算平均
+	public double getAverage() {
+		//return scores.stream().mapToDouble(score -> score.doubleValue()).average().orElse(0.0);
+		//return scores.stream().mapToDouble(score -> score).average().orElse(0.0);
+		return scores.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+	}
+	
 }
