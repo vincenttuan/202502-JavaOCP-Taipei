@@ -19,12 +19,24 @@ public class BMICalculator {
 				if(height == 0) {
 					System.out.print("請輸入身高:");
 					height = scanner.nextDouble();
+					if(height <= 0) {
+						height = 0;
+						System.out.println("輸入錯誤請重新輸入");
+						scanner.nextLine(); // 清空
+						continue;
+					}
 				}
 				
 				// 體重輸入
 				if(weight == 0) {
-					System.out.print("請體重身高:");
+					System.out.print("請輸入體重:");
 					weight = scanner.nextDouble();
+					if(weight <= 0) {
+						weight = 0;
+						System.out.println("輸入錯誤請重新輸入");
+						scanner.nextLine(); // 清空
+						continue;
+					}
 				}
 				
 				if(height != 0 && weight != 0) {
