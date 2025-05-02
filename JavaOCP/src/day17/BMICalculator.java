@@ -32,6 +32,7 @@ public class BMICalculator {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("輸入錯誤請重新輸入");
+				scanner.nextLine(); // 清空
 				continue;
 			}
 			
