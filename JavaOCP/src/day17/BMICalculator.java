@@ -35,12 +35,8 @@ public class BMICalculator {
 				scanner.nextLine(); // 清空
 				continue;
 			}
-			
-			double bmi = weight / Math.pow(height/100, 2);
-			System.out.println(bmi);
 		}
-		
-		
+		double bmi = weight / Math.pow(height/100, 2);
+		System.out.println(bmi);
 	}
-
 }
