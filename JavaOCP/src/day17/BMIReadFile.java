@@ -19,9 +19,16 @@ public class BMIReadFile {
 					String name = array[0]; // 姓名
 					String height = array[1]; // 身高
 					String weight = array[2]; // 體重
-					System.out.printf("姓名:%s 身高:%s 體重:%s%n", name, height, weight);
+					//--------------------------------------------------------------
+					double h = Double.parseDouble(height); // 字串轉double
+					double w = Double.parseDouble(weight); // 字串轉double
+					double bmi = w / Math.pow(h/100, 2);
+					System.out.printf("姓名:%s 身高:%.1f 體重:%.1f BMI:%.2f%n", 
+							name, h, w, bmi);
 				} catch (ArrayIndexOutOfBoundsException e) {
-					System.err.println(line + " ==> 分析錯誤");
+					System.err.println(line + " ==> 分析錯誤(" + e.getMessage() + ")");
+				} catch (NumberFormatException e) {
+					System.err.println(line + " ==> 資料轉換錯誤(" + e.getMessage() + ")");
 				}
 			}
 		} catch (IOException e) {
