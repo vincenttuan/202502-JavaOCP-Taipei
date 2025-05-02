@@ -23,10 +23,9 @@ public class InputScore2 {
 				System.out.println("輸入資料不正確, 請重新輸入 !");
 				System.out.println(e);
 				continue;
-			} finally {
-				System.out.println("程式結束!");
 			}
 		}
+		System.out.println("程式結束!");
 
 	}
 
