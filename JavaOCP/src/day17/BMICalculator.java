@@ -36,6 +36,8 @@ public class BMICalculator {
 				continue;
 			}
 			
+			double bmi = weight / Math.pow(height/100, 2);
+			System.out.println(bmi);
 		}
 		
 		
