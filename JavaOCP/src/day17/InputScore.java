@@ -4,7 +4,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputScore {
-
 	public static void main(String[] args) {
 		// 使用者輸入成績之後系統判斷是否及格
 		Scanner scanner = new Scanner(System.in);
