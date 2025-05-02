@@ -25,7 +25,7 @@ public class BMIReadFile {
 				}
 			}
 		} catch (IOException e) {
-			System.out.println("讀檔錯誤:" + e);
+			System.err.println("讀檔錯誤:" + e);
 		}
 
 	}
