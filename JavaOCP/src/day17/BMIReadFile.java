@@ -13,6 +13,17 @@ public class BMIReadFile {
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(filePath));
 			System.out.println("讀檔成功");
+			for(String line : lines) {
+				try {
+					String[] array = line.split(",");
+					String name = array[0]; // 姓名
+					String height = array[1]; // 身高
+					String weight = array[2]; // 體重
+					System.out.printf("姓名:%s 身高:%s 體重:%s%n", name, height, weight);
+				} catch (ArrayIndexOutOfBoundsException e) {
+					System.err.println(line + " ==> 分析錯誤");
+				}
+			}
 		} catch (IOException e) {
 			System.out.println("讀檔錯誤:" + e);
 		}
