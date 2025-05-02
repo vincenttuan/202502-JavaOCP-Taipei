@@ -16,12 +16,13 @@ public class InputScore {
 			} else {
 				System.out.println("不及格");
 			}
-			System.out.println("程式結束!");
 		} catch (InputMismatchException e) {
 			System.out.println("輸入資料不正確, 請重新輸入 !");
 			System.out.println(e);
+			return;
+		} finally {
+			System.out.println("程式結束!");
 		}
-		
 	}
 
 }
