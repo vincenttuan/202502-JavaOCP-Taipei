@@ -36,8 +36,11 @@ public class ReadStudent {
 				int chinese = rs.getInt("chinese");
 				int english = rs.getInt("english");
 				int math = rs.getInt("math");
+				int sum = chinese + english + math;
+				double avg = sum / 3.0;		
 				// 資料印出
-				System.out.printf("%d\t%s\t%d\t%d\t%d%n", id, name, chinese, english, math);
+				System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.1f%n", 
+						id, name, chinese, english, math, sum, avg);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
