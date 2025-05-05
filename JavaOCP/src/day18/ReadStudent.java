@@ -23,7 +23,10 @@ public class ReadStudent {
 			// 2. 建立 Connection 連線
 			conn = DriverManager.getConnection(jdbcUrl, username, password);
 			// 3. 編寫 sql 語句
-			String sql = "select id, name, chinese, english, math from student";
+			//String sql = "select id, name, chinese, english, math from student";
+			String sql = "select id, name, chinese, english, math, " +
+					     "(chinese + english + math) as total, (chinese + english + math)/3 as avg " +
+					     "from student";
 			// 4. 建立 Statement 用來放置 sql 語句
 			stmt = conn.createStatement();
 			// 5. 將 sql 語句透過 stmt 執行查詢送出並得到結果集合
@@ -36,8 +39,10 @@ public class ReadStudent {
 				int chinese = rs.getInt("chinese");
 				int english = rs.getInt("english");
 				int math = rs.getInt("math");
-				int total = chinese + english + math;
-				double avg = total / 3.0;		
+				//int total = chinese + english + math;
+				//double avg = total / 3.0;	
+				int total = rs.getInt("total");
+				double avg = rs.getDouble("avg");
 				// 資料印出
 				System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.1f%n", 
 						id, name, chinese, english, math, total, avg);
