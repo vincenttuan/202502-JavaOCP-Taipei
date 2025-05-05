@@ -62,3 +62,10 @@ select
     end as level
 from web.student;    
 
+-- 修改
+update student 
+set english = 100, math = 100
+where id = 1;
+
+-- 刪除
+delete from student where id = 5;
