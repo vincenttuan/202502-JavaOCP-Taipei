@@ -13,6 +13,9 @@
 	</dependency>
 	
 	<!-- MySQL API -->
+	<!--
+		jdbc:mysql://localhost:3306/web?serverTimezone=Asia/Taipei&characterEncoding=utf-8&useUnicode=true&useSSL=false
+	-->
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
