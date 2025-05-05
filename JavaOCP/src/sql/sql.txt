@@ -1,7 +1,7 @@
 -- 建立資料表
 use web;
 create table if not exists student (
-	id int, -- 學號
+	id int primary key, -- 學號
     name varchar(20), -- 姓名
     chinese int, -- 國文
     english int, -- 英文
