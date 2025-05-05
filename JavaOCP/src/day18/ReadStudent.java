@@ -19,7 +19,7 @@ public class ReadStudent {
 		
 		try {
 			// 1. 建立 jdbc driver 物件
-			Class.forName("com.mysql.cj.jdbc.Driver"); 
+			Class.forName("com.mysql.cj.jdbc.Driver"); // jdbc 4.0 可以省略不寫
 			// 2. 建立 Connection 連線
 			conn = DriverManager.getConnection(jdbcUrl, username, password);
 			// 3. 編寫 sql 語句
@@ -41,6 +41,14 @@ public class ReadStudent {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				if(rs != null) rs.close();
+				if(stmt != null) stmt.close();
+				if(conn != null) conn.close();
+			} catch (SQLException e2) {
+				e2.printStackTrace();
+			}
 		}
 		
 
