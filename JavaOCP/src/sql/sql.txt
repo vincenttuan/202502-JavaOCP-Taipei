@@ -1,0 +1,64 @@
+-- 建立資料表
+use web;
+create table if not exists student (
+	id int, -- 學號
+    name varchar(20), -- 姓名
+    chinese int, -- 國文
+    english int, -- 英文
+    math int -- 數學
+);
+
+-- 新增紀錄
+INSERT INTO student (id, name, chinese, english, math)
+VALUES (1, 'John', 100, 90, 80);
+
+INSERT INTO student (id, name, chinese, english, math)
+VALUES (2, 'Mary', 70, 83, 64);
+
+INSERT INTO student (id, name, chinese, english, math)
+VALUES (3, 'Jack', 80, 77, 54);
+
+INSERT INTO student (id, name, chinese, english, math)
+VALUES (4, 'Rose', 56, 100, 89);
+
+-- 查詢資料
+SELECT id, name, chinese, english, math FROM web.student;
+
+SELECT id, name, chinese FROM web.student order by chinese desc;
+
+select name, (chinese + english + math) as total from web.student
+
+select name, chinese from web.student where chinese >= 60;
+
+select name, chinese, english, math 
+from web.student 
+where chinese >= 60 and english >= 60 and math >= 60;
+
+-- 國文總分, 英文總分, 數學總分
+select sum(chinese), sum(english), sum(math) from web.student;
+
+-- 按照總分大小排名
+select
+row_number() over (order by (chinese + english + math) desc) no,
+name, chinese, english, math, (chinese + english + math) as total
+from web.student
+order by total desc;
+
+-- 請幫我計算各科總分與平均
+select 
+	sum(chinese) as 國文總分, round(avg(chinese), 1) as 國文平均,
+	sum(english) as 英文總分, round(avg(english), 1) as 英文平均,
+	sum(math)    as 數學總分, round(avg(math), 1)    as 數學平均
+from web.student;    
+
+select 
+	name, chinese, 
+    case 
+		when chinese >= 90 then 'A'
+		when chinese >= 80 then 'B'
+		when chinese >= 70 then 'C'
+		when chinese >= 60 then 'D'
+		else 'F'
+    end as level
+from web.student;    
+
