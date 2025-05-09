@@ -10,12 +10,9 @@ public class ReadAccountTxLog {
 
 	public static void main(String[] args) {
 		// 查詢每一個帳戶的交易紀錄
-		String sql = "select a.id, a.`name`, t.tx_type, t.amount "
-					 + "from account a "
-					 + "left join tx_log t on a.id = t.account_id";
 		try(Connection conn = MySQLConnection.getConnection();
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql)) {
+			ResultSet rs = stmt.executeQuery(SQL.ACCOUNT_TXLOG)) {
 			
 			// 標題列
 			ResultSetMetaData md = rs.getMetaData();

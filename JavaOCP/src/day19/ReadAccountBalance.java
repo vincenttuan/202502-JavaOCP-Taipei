@@ -27,16 +27,9 @@ public class ReadAccountBalance {
 	
 	public static List<AccountBalance> finAccountBalances() {
 		List<AccountBalance> list = new ArrayList<>();
-		String sql = "select a.id, a.`name`, coalesce(sum(case when t.tx_type = 'deposit' then t.amount "
-				+ "when t.tx_type = 'withdraw' then -t.amount "
-				+ "else 0 end), 0) as balance "
-				+ "from account a "
-				+ "left join tx_log t on a.id = t.account_id "
-				+ "group by a.id, a.name ";
-		
 		try(Connection conn = MySQLConnection.getConnection();
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql)) {
+			ResultSet rs = stmt.executeQuery(SQL.ACCOUNT_BALANCE)) {
 			
 			while(rs.next()) {
 				Integer id = rs.getInt("id");

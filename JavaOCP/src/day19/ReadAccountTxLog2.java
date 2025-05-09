@@ -37,13 +37,9 @@ public class ReadAccountTxLog2 {
 		List<AccountTxLog> list = new ArrayList<>();
 		
 		// 查詢每一個帳戶的交易紀錄
-		String sql = "select a.id, a.`name`, t.tx_type, t.amount, t.tx_date "
-					 + "from account a "
-					 + "left join tx_log t on a.id = t.account_id";
-		
 		try(Connection conn = MySQLConnection.getConnection();
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql)) {
+			ResultSet rs = stmt.executeQuery(SQL.ACCOUNT_TXLOG)) {
 			
 			while(rs.next()) {
 				Integer id = rs.getInt("id");
