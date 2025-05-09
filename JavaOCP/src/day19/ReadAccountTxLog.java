@@ -20,7 +20,7 @@ public class ReadAccountTxLog {
 			// 標題列
 			ResultSetMetaData md = rs.getMetaData();
 			System.out.println("+----------+----------+----------+----------+");
-			System.out.printf("|%-10s|%-10s|%-10s|%-10s|%n", 
+			System.out.printf("|%-10s|%-10s|%-10s|%10s|%n", 
 					md.getColumnName(1), md.getColumnName(2), md.getColumnName(3), md.getColumnName(4));
 			System.out.println("+----------+----------+----------+----------+");
 			// 內容
