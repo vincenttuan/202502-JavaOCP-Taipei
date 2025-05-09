@@ -11,7 +11,15 @@ import java.util.List;
 public class ReadAccountTxLog2 {
 
 	public static void main(String[] args) {
-		
+		List<AccountTxLog> list = findAccountTxLogs();
+		print(list);
+	}
+	
+	public static void print(List<AccountTxLog> list) {
+		list.forEach(aTxLog -> {
+			System.out.printf("|%-10d|%-10s|%-10s|%,10d|%10s|%n", 
+					aTxLog.getId(), aTxLog.getName(), aTxLog.getTxType(), aTxLog.getAmount(), aTxLog.getTxDate());
+		});
 	}
 	
 	public static List<AccountTxLog> findAccountTxLogs() {
