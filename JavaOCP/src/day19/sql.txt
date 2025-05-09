@@ -13,7 +13,7 @@ create table if not exists tx_log (
     amount int not null,
     tx_date timestamp default current_timestamp
 );
-
+-- -----------------------------------------------------------
 -- 新增帳戶紀錄
 insert into account(id, `name`) values(10001, 'John');
 insert into account(id, `name`) values(10002, 'Mary');
@@ -23,7 +23,7 @@ insert into tx_log(account_id, tx_type, amount) values(10001, 'deposit', 500);
 insert into tx_log(account_id, tx_type, amount) values(10002, 'deposit', 800);
 insert into tx_log(account_id, tx_type, amount) values(10001, 'withdraw', 700);
 insert into tx_log(account_id, tx_type, amount) values(10002, 'withdraw', 600);
-
+-- -----------------------------------------------------------
 -- 查詢每一個帳戶的交易紀錄
 select a.id, a.`name`, t.tx_type, t.amount
 from account a
