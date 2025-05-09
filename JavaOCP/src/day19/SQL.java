@@ -8,7 +8,7 @@ public interface SQL {
 			+ "left join tx_log t on a.id = t.account_id "
 			+ "group by a.id, a.name "; 
 	
-	String ACCOUNT_TXLOG = "select a.id, a.`name`, t.tx_type, t.amount "
+	String ACCOUNT_TXLOG = "select a.id, a.`name`, t.tx_type, t.amount, t.tx_date "
 			 + "from account a "
 			 + "left join tx_log t on a.id = t.account_id";
 }
