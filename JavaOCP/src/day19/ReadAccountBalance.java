@@ -14,6 +14,14 @@ public class ReadAccountBalance {
 		// 並建立 AccountBalance 物件來存放
 		// 1.印出每一個人的帳戶餘額
 		// 2.印出帳戶總餘額
+		List<AccountBalance> list = finAccountBalances();
+		list.forEach(ab -> {
+			System.out.printf("%s 餘額:$%,d%n", ab.getName(), ab.getBalance());
+		});
+		
+		int totalBalance = list.stream().mapToInt(ab -> ab.getBalance()).sum();
+		System.out.printf("總餘額:$%,d%n", totalBalance);
+		
 	}
 	
 	
