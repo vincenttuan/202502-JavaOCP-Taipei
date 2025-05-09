@@ -21,7 +21,7 @@ public class ReadAccountTxLog {
 				String name = rs.getString("name");
 				String txType = rs.getString("tx_type");
 				Integer amount = rs.getInt("amount");
-				System.out.printf("%d\t%s\t%s\t%d%n", id, name, txType, amount);
+				System.out.printf("%-10d%-10s%-10s%,10d%n", id, name, txType, amount);
 			}
 			
 		} catch (SQLException e) {
