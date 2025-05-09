@@ -13,6 +13,17 @@ public class ReadAccountTxLog2 {
 	public static void main(String[] args) {
 		List<AccountTxLog> list = findAccountTxLogs();
 		print(list);
+		// 目前所有人的帳戶餘額總共有多少(所有的 deposit - 所有的 withdraw)
+		int depositBalance = list.stream()
+								 .filter(aTxLog -> aTxLog.getTxType().equals("deposit"))
+								 .mapToInt(aTxLog -> aTxLog.getAmount())
+								 .sum();
+		int withdrawBalance = list.stream()
+				 .filter(aTxLog -> aTxLog.getTxType().equals("withdraw"))
+				 .mapToInt(aTxLog -> aTxLog.getAmount())
+				 .sum();
+		int balance = depositBalance - withdrawBalance;
+		System.out.printf("總餘額: %,d%n", balance);
 	}
 	
 	public static void print(List<AccountTxLog> list) {
