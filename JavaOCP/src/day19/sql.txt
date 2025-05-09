@@ -1,0 +1,15 @@
+use web;
+-- 建立 account 帳戶
+create table if not exists account (
+	id int primary key,
+    `name` varchar(20) not null
+);
+
+-- 建立 tx_log 交易紀錄
+create table if not exists tx_log (
+	id int auto_increment primary key,
+    account_id int not null,
+    tx_type enum('deposit', 'withdraw') not null,
+    amount int not null,
+    tx_date timestamp default current_timestamp
+);
