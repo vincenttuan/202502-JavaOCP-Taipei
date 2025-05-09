@@ -24,3 +24,16 @@ insert into tx_log(account_id, tx_type, amount) values(10002, 'deposit', 800);
 insert into tx_log(account_id, tx_type, amount) values(10001, 'withdraw', 700);
 insert into tx_log(account_id, tx_type, amount) values(10002, 'withdraw', 600);
 
+-- 查詢每一個帳戶的交易紀錄
+select a.id, a.`name`, t.tx_type, t.amount
+from account a
+left join tx_log t on a.id = t.account_id;
+
+-- 查詢每一個帳戶的餘額
+select a.id, a.`name`, sum(case when t.tx_type = 'deposit' then t.amount
+								when t.tx_type = 'withdraw' then -t.amount
+                                else 0 end) as balance
+from account a
+left join tx_log t on a.id = t.account_id
+group by a.id, a.name
+
