@@ -30,9 +30,10 @@ from account a
 left join tx_log t on a.id = t.account_id;
 
 -- 查詢每一個帳戶的餘額
-select a.id, a.`name`, sum(case when t.tx_type = 'deposit' then t.amount
+-- coalesce, 0 是指若 sum 得到 null, 則放 0
+select a.id, a.`name`, coalesce(sum(case when t.tx_type = 'deposit' then t.amount
 								when t.tx_type = 'withdraw' then -t.amount
-                                else 0 end) as balance
+                                else 0 end), 0) as balance
 from account a
 left join tx_log t on a.id = t.account_id
 group by a.id, a.name
