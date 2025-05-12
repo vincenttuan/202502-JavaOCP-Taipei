@@ -16,7 +16,17 @@ public class StudentScoreTaskMain {
 		t3.start();
 		
 		// 請問這3個學生總分加總為何 ?
+		// 必須等到 t1, t2, t3 都執行完畢之後能執行以下程式碼
+		try {
+			t1.join();
+			t2.join();
+			t3.join();
+		} catch (Exception e) {
+			
+		}
 		
+		long total = task1.getSum() + task2.getSum() + task3.getSum();
+		System.out.printf("Total: %d%n", total);
 
 	}
 
