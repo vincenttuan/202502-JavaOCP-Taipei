@@ -14,6 +14,9 @@ public class StudentScoreTaskMain {
 		t1.start();
 		t2.start();
 		t3.start();
+		
+		// 請問這3個學生總分加總為何 ?
+		
 
 	}
 
