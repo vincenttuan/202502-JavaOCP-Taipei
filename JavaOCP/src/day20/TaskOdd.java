@@ -1,6 +1,6 @@
 package day20;
 
-public class Task {
+public class TaskOdd {
 	
 	public void job() {
 		// 取得執行緒名稱:

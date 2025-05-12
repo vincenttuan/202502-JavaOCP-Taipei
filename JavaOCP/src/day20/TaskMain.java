@@ -3,7 +3,7 @@ package day20;
 public class TaskMain {
 	
 	public static void main(String[] args) {
-		Task task = new Task();
+		TaskOdd task = new TaskOdd();
 		task.job();
 		
 	}
