@@ -7,6 +7,7 @@ public class TaskEventRunnable implements Runnable {
 		this.taskEven = taskEven;
 	}
 	
+	// 執行緒透過 start() 啟動時會自動執行 run() 方法裡面的任務
 	@Override
 	public void run() {
 		taskEven.job();

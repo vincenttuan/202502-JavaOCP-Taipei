@@ -7,6 +7,7 @@ public class TaskOddRunnable implements Runnable {
 		this.taskOdd = taskOdd;
 	}
 	
+	// 執行緒透過 start() 啟動時會自動執行 run() 方法裡面的任務
 	@Override
 	public void run() {
 		taskOdd.job();
