@@ -5,6 +5,7 @@ import java.util.List;
 public class Runner implements Runnable {
 	private String name;
 	private List<String> list;
+	
 	public Runner(String name, List<String> list) {
 		this.name = name;
 		this.list = list;
