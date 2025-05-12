@@ -21,7 +21,7 @@ public class RunnerMain {
 		t1.start();
 		t2.start();
 		t3.start();
-		// 列印排名表
+		// 等待排名表完成
 		while(list.size() != 3) {
 			// 利用 sleep(10); 等待 10ms
 			try {
