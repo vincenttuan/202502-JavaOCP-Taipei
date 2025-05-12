@@ -8,9 +8,19 @@ import java.util.stream.Stream;
 
 public class StudentScoreTask implements Runnable {
 	private String fileName;
+	private long sum;
+	private double avg;
 	
 	public StudentScoreTask(String fileName) {
 		this.fileName = fileName;
+	}
+	
+	public long getSum() {
+		return sum;
+	}
+	
+	public double getAvg() {
+		return avg;
 	}
 	
 	@Override
@@ -29,6 +39,8 @@ public class StudentScoreTask implements Runnable {
 			// 平均
 			double avg = stat.getAverage();
 			
+			this.sum = sum;
+			this.avg = avg;
 			System.out.printf("總分:%d 平均:%.1f%n", sum, avg);
 			
 		} catch (Exception e) {
