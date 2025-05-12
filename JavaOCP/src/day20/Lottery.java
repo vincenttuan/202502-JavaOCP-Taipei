@@ -21,7 +21,7 @@ public class Lottery implements Runnable {
 		try {
 			Thread.sleep(random.nextInt(2000)); // 模擬暫停時間 0~1999 ms
 			int lottoNumber = random.nextInt(100); // 0~99
-			System.out.printf("%d 樂透機選出 %d 號%n", lottoNumber);
+			System.out.printf("%d 樂透機選出 %d 號%n", num, lottoNumber);
 			// 將樂透號碼注入到 list
 			list.add(lottoNumber);
 		} catch (InterruptedException e) {
