@@ -21,6 +21,18 @@ public class RunnerMain {
 		t1.start();
 		t2.start();
 		t3.start();
+		// 列印排名表
+		while(list.size() != 3) {
+			// 利用 sleep(10); 等待 10ms
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		// 列印排名表
+		System.out.println(list);
 	}
 
 }
