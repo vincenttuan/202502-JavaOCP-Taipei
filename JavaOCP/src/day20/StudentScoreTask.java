@@ -15,9 +15,12 @@ public class StudentScoreTask implements Runnable {
 	public void run() {
 		// 讀檔
 		try {
-			String content = Files.readString(Path.of(fileName));
-			String[] array = content.split(",");
-			int[] scores = Stream.of(array).mapToInt(score -> Integer.parseInt(score)).toArray();
+			String content = Files.readString(Path.of(fileName)); // 字串: 100,90,80,70,60
+			String[] array = content.split(","); // 字串陣列: ["100","90","80","70","60"]
+			int[] scores = Stream.of(array)
+								 .mapToInt(score -> Integer.parseInt(score))
+								 .toArray(); // int 陣列: [100,90,80,70,60]
+			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
