@@ -16,15 +16,15 @@ public class Youbike {
     private String snaen;
     private String aren;
     private String act;
-    private String srcupdatetime;
-    private String updatetime;
-    private String infotime;
-    private Date infodate;
+    private String srcUpdateTime;
+    private String updateTime;
+    private String infoTime;
+    private Date infoDate;
     private int total;
-    private int availableRentBikes;
+    private int available_rent_bikes;
     private double latitude;
     private double longitude;
-    private int availableReturnBikes;
+    private int available_return_bikes;
     
     
 

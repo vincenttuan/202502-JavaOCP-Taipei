@@ -1,6 +1,6 @@
 INSERT INTO youbike (
     sno, sna, sarea, mday, ar, sareaen, snaen, aren, act,
-    srcupdatetime, updatetime, infotime, infodate,
+    srcUpdateTime, updateTime, infoTime, infoDate,
     total, available_rent_bikes, latitude, longitude, available_return_bikes
 ) VALUES (
     ?, ?, ?, ?, ?, ?, ?, ?, ?,
@@ -16,10 +16,10 @@ ON DUPLICATE KEY UPDATE
     snaen = VALUES(snaen),
     aren = VALUES(aren),
     act = VALUES(act),
-    srcupdatetime = VALUES(srcupdatetime),
-    updatetime = VALUES(updatetime),
-    infotime = VALUES(infotime),
-    infodate = VALUES(infodate),
+    srcUpdateTime = VALUES(srcUpdateTime),
+    updateTime = VALUES(updateTime),
+    infoTime = VALUES(infoTime),
+    infoDate = VALUES(infoDate),
     total = VALUES(total),
     available_rent_bikes = VALUES(available_rent_bikes),
     latitude = VALUES(latitude),

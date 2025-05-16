@@ -47,15 +47,15 @@ public class YoubikeUtil {
 			pstmt.setString(7, y.getSnaen());
 			pstmt.setString(8, y.getAren());
 			pstmt.setString(9, y.getAct());
-			pstmt.setString(10, y.getSrcupdatetime());
-			pstmt.setString(11, y.getUpdatetime());
-			pstmt.setString(12, y.getInfotime());
-			pstmt.setDate(13, y.getInfodate() == null ? null : new java.sql.Date(y.getInfodate().getTime()));
+			pstmt.setString(10, y.getSrcUpdateTime());
+			pstmt.setString(11, y.getUpdateTime());
+			pstmt.setString(12, y.getInfoTime());
+			pstmt.setDate(13, y.getInfoDate() == null ? null : new java.sql.Date(y.getInfoDate().getTime()));
 			pstmt.setInt(14, y.getTotal());
-			pstmt.setInt(15, y.getAvailableRentBikes());
+			pstmt.setInt(15, y.getAvailable_rent_bikes());
 			pstmt.setDouble(16, y.getLatitude());
 			pstmt.setDouble(17, y.getLongitude());
-			pstmt.setInt(18, y.getAvailableReturnBikes());
+			pstmt.setInt(18, y.getAvailable_return_bikes());
 			// update
 			pstmt.executeUpdate();
 		} catch (Exception e) {
