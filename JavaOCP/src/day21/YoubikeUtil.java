@@ -17,7 +17,7 @@ import com.google.gson.reflect.TypeToken;
 public class YoubikeUtil {
 	
 	private static Connection connection = MySQLConnection.getConnection();
-	
+	private static int totalUpdateRows = 0;
 	private static String getYoubikeJsonFromTaipeiData() throws Exception {
 		String urlString = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
 		InputStream inputStream = new URL(urlString).openStream();
@@ -59,13 +59,14 @@ public class YoubikeUtil {
 			pstmt.setInt(18, y.getAvailable_return_bikes());
 			// update
 			int rows = pstmt.executeUpdate();
-			System.out.println("實際有更新的筆數: " + rows);
+			totalUpdateRows += rows;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public static void refreshYoubike() {
+		totalUpdateRows = 0;
 		System.out.println("Youbike 更新開始: " + new Date());
 		try {
 			List<Youbike> youbikes = getYoubikes();
@@ -73,6 +74,7 @@ public class YoubikeUtil {
 			for(Youbike y : youbikes) {
 				saveOrUpdateYoubike(y);
 			}
+			System.out.println("實際有更新的筆數: " + totalUpdateRows);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
