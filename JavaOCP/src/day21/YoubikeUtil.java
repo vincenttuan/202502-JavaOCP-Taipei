@@ -68,7 +68,7 @@ public class YoubikeUtil {
 		System.out.println("Youbike 更新開始: " + new Date());
 		try {
 			List<Youbike> youbikes = getYoubikes();
-			System.out.println("更新筆數: " + youbikes.size()i);
+			System.out.println("更新筆數: " + youbikes.size());
 			for(Youbike y : youbikes) {
 				saveOrUpdateYoubike(y);
 			}
