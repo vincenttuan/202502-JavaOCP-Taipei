@@ -1,3 +1,4 @@
+use web;
 create table if not exists youbike (
 	sno varchar(20) primary key, -- 站點代號(主鍵)
 	sna varchar(100), -- 站名(中文)
