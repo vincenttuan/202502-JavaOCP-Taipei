@@ -13,6 +13,7 @@ create table if not exists youbike (
 	updatetime varchar(30), -- 資料處理時間
 	infotime varchar(30), -- 資訊時間
 	infodate date, -- 資訊日期
+	total int, -- 全部車數
 	availableRentBikes int, -- 可借車數
 	latitude double, -- 緯度
     longitude double, -- 經度

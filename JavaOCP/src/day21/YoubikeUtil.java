@@ -36,7 +36,7 @@ public class YoubikeUtil {
 	}
 	
 	private static void saveOrUpdateYoubike(Youbike y) throws Exception {
-		String sql = Files.readString(Path.of("day21/youbike新增與修改.sql"));
+		String sql = Files.readString(Path.of("src/day21/youbike_insert_or_update.sql"));
 		try(PreparedStatement pstmt = connection.prepareStatement(sql)) {
 			pstmt.setString(1, y.getSno());
 			pstmt.setString(2, y.getSna());
@@ -50,7 +50,7 @@ public class YoubikeUtil {
 			pstmt.setString(10, y.getSrcupdatetime());
 			pstmt.setString(11, y.getUpdatetime());
 			pstmt.setString(12, y.getInfotime());
-			pstmt.setDate(13, new java.sql.Date(y.getInfodate().getTime()));
+			pstmt.setDate(13, y.getInfodate() == null ? null : new java.sql.Date(y.getInfodate().getTime()));
 			pstmt.setInt(14, y.getTotal());
 			pstmt.setInt(15, y.getAvailableRentBikes());
 			pstmt.setDouble(16, y.getLatitude());
@@ -71,7 +71,7 @@ public class YoubikeUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		System.out.println("Youbike 更新成功!");
 	}
 	
 	public static void main(String[] args) throws Exception {
