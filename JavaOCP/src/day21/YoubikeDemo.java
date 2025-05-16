@@ -12,7 +12,10 @@ public class YoubikeDemo {
 		for(Youbike y : youbikes) {
 			PositionParam param2 = new PositionParam(y.getLatitude()+"", y.getLongitude()+"");
 			double m = GPSUtil.getDistanceByCoordinate(param2, param1);
-			System.out.printf("距離巨匠東認: %,.1fm %s (%f, %f)%n", m, y.getSna(), y.getLatitude(), y.getLongitude());
+			if(m < 100) {
+				System.out.printf("距離巨匠東認: %,.1fm 可借: %d 台 %s %s (%f, %f)%n", 
+						m, y.getAvailable_rent_bikes(), y.getSna(), y.getAr(), y.getLatitude(), y.getLongitude());
+			}
 		}
 	}
 
