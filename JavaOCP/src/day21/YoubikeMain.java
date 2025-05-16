@@ -9,7 +9,7 @@ public class YoubikeMain {
 			while(true) {
 				try {
 					Thread.sleep(30_000); // 延遲 30 秒
-					YoubikeUtil.refreshYoubike();
+					YoubikeUtil.refreshYoubike(); // Youbike 更新程式
 				} catch (Exception e) {
 					// TODO: handle exception
 				}
