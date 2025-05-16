@@ -25,7 +25,7 @@ public class YoubikeUtil {
 		return content;
 	}
 	
-	private static List<Youbike> getYoubikes() throws Exception {
+	public static List<Youbike> getYoubikes() throws Exception {
 		String content = getYoubikeJsonFromTaipeiData();
 		Gson gson = new Gson();
 		// 定義要轉換的目標型別: List<Youbike>
