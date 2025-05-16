@@ -24,7 +24,7 @@ public class YoubikeUtil {
 		return content;
 	}
 	
-	public static List<Youbike> getYoubikes() throws Exception {
+	private static List<Youbike> getYoubikes() throws Exception {
 		String content = getYoubikeJsonFromTaipeiData();
 		Gson gson = new Gson();
 		// 定義要轉換的目標型別: List<Youbike>
@@ -35,7 +35,7 @@ public class YoubikeUtil {
 		return youbikes;
 	}
 	
-	public void saveOrUpdateYoubike(Youbike y) throws Exception {
+	private static void saveOrUpdateYoubike(Youbike y) throws Exception {
 		String sql = Files.readString(Path.of("day21/youbike新增與修改.sql"));
 		try(PreparedStatement pstmt = connection.prepareStatement(sql)) {
 			pstmt.setString(1, y.getSno());
@@ -63,7 +63,18 @@ public class YoubikeUtil {
 		}
 	}
 	
+	public static void refreshYoubike() {
+		try {
+			for(Youbike y : getYoubikes()) {
+				saveOrUpdateYoubike(y);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public static void main(String[] args) throws Exception {
-		System.out.println(YoubikeUtil.getYoubikes().size());
+		refreshYoubike();
 	}
 }
