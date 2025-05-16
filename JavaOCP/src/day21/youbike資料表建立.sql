@@ -7,7 +7,7 @@ create table if not exists youbike (
 	ar varchar(200), -- 地址
 	sareaen varchar(100), -- 地區(英文)
 	snaen varchar(100), -- 站名(英文)
-	aren varchar(20), -- 地址(英文)
+	aren varchar(200), -- 地址(英文)
 	act varchar(10), -- 是否啟用(1/0)
 	srcupdatetime varchar(30), -- 原始資料更新時間
 	updatetime varchar(30), -- 資料處理時間
