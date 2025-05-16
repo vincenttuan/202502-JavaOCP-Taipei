@@ -16,6 +16,4 @@ create table if not exists youbike (
 	latitude double, -- 緯度
     longitude double, -- 經度
     availableReturnBikes int -- 可還車數
-	
-
 )
