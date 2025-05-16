@@ -1,4 +1,3 @@
-use web;
 INSERT INTO youbike (
     sno, sna, sarea, mday, ar, sareaen, snaen, aren, act,
     srcupdatetime, updatetime, infotime, infodate,
