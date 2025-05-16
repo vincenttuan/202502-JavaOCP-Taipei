@@ -74,7 +74,7 @@ public class YoubikeUtil {
 			for(Youbike y : youbikes) {
 				saveOrUpdateYoubike(y);
 			}
-			System.out.println("實際有更新的筆數: " + totalUpdateRows);
+			System.out.println("實際有更新的筆數: " + totalUpdateRows/2);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
