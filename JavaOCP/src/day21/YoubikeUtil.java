@@ -58,7 +58,8 @@ public class YoubikeUtil {
 			pstmt.setDouble(17, y.getLongitude());
 			pstmt.setInt(18, y.getAvailable_return_bikes());
 			// update
-			pstmt.executeUpdate();
+			int rows = pstmt.executeUpdate();
+			System.out.println("實際有更新的筆數: " + rows);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -68,7 +69,7 @@ public class YoubikeUtil {
 		System.out.println("Youbike 更新開始: " + new Date());
 		try {
 			List<Youbike> youbikes = getYoubikes();
-			System.out.println("更新筆數: " + youbikes.size());
+			System.out.println("資料筆數: " + youbikes.size());
 			for(Youbike y : youbikes) {
 				saveOrUpdateYoubike(y);
 			}
