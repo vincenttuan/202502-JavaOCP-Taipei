@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Date;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -64,6 +65,7 @@ public class YoubikeUtil {
 	}
 	
 	public static void refreshYoubike() {
+		System.out.println("Youbike 更新開始: " + new Date());
 		try {
 			for(Youbike y : getYoubikes()) {
 				saveOrUpdateYoubike(y);
@@ -71,7 +73,7 @@ public class YoubikeUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("Youbike 更新成功!");
+		System.out.println("Youbike 更新結束: " + new Date());
 	}
 	
 	public static void main(String[] args) throws Exception {
