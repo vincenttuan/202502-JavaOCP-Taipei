@@ -14,8 +14,8 @@ create table if not exists youbike (
 	infotime varchar(30), -- 資訊時間
 	infodate date, -- 資訊日期
 	total int, -- 全部車數
-	availableRentBikes int, -- 可借車數
+	available_rent_bikes int, -- 可借車數
 	latitude double, -- 緯度
     longitude double, -- 經度
-    availableReturnBikes int -- 可還車數
+    available_return_bikes int -- 可還車數
 )
