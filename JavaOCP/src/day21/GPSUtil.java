@@ -1,11 +1,15 @@
 package day21;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 class PositionParam {
-    private String positionlng;  //坐标经度
     private String positionlat;  //坐标纬度
+    private String positionlng;  //坐标经度
 
 }
 
