@@ -6,7 +6,6 @@ public class JoinDemo {
 	static int high = 0;
 	static int low = 0;
 	
-	
 	public static void main(String[] args) {
 		Runnable r1 = () -> {
 			Random random = new Random();
