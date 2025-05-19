@@ -33,8 +33,8 @@ class Worker implements Runnable {
 public class Shower {
 
 	public static void main(String[] args) {
-		
-
+		Thread father = new Thread(new Father());
+		father.start();
 	}
 
 }
