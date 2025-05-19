@@ -1,6 +1,6 @@
 package day22;
 
-// 提款
+// 提款工作
 public class Withdraw implements Runnable {
 	private Account account;
 	private int amount;
