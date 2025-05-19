@@ -6,7 +6,7 @@ public class JoinDemo {
 	static int high = 0;
 	static int low = 0;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Runnable r1 = () -> {
 			Random random = new Random();
 			high = random.nextInt(20) + 81; // 高標
@@ -24,6 +24,10 @@ public class JoinDemo {
 		t1.start();
 		System.out.println("t2 啟動");
 		t2.start();
+		
+		// 等待 t1, t2 執行完畢才進行後續邏輯
+		t1.join();
+		t2.join();
 		
 		// 計算均標
 		double avg = (high + low)/2.0;
