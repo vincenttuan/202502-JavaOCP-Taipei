@@ -36,7 +36,7 @@ public class JoinDemo3 {
 	public static int getScore(String fileName) {
 		int score = 0;
 		try {
-			String content = Files.readString(Path.of("src/day22/" + fileName));
+			String content = Files.readString(Path.of("src/day22/" + fileName)).trim();
 			score = Integer.parseInt(content);
 		} catch (IOException e) {
 			e.printStackTrace();
