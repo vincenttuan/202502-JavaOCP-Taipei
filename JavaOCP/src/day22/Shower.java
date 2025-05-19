@@ -12,6 +12,13 @@ class Father implements Runnable {
 		Thread worker = new Thread(new Worker());
 		worker.start(); // 叫瓦斯工人送瓦斯
 		// -------------------------------------------
+		try {
+			worker.join();
+		} catch (Exception e) {
+			
+		}
+		
+		// -------------------------------------------
 		System.out.println("爸爸開始洗熱水澡");
 		System.out.println("爸爸洗完澡了");
 	}
