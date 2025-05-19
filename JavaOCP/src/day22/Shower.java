@@ -9,8 +9,8 @@ class Father implements Runnable {
 		System.out.println("爸爸發現沒瓦斯了");
 		System.out.println("爸爸打電話叫瓦斯");
 		// -------------------------------------------
-		Thread worder = new Thread(new Worker());
-		worder.start(); // 叫瓦斯工人送瓦斯
+		Thread worker = new Thread(new Worker());
+		worker.start(); // 叫瓦斯工人送瓦斯
 		// -------------------------------------------
 		System.out.println("爸爸開始洗熱水澡");
 		System.out.println("爸爸洗完澡了");
