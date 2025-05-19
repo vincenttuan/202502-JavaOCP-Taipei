@@ -8,7 +8,7 @@ public class Account {
 	}
 	
 	// 提款服務
-	public void withdraw(int amount) {
+	public synchronized void withdraw(int amount) {
 		String tName = Thread.currentThread().getName();
 		int currentBalance = balance; // 取得帳戶餘額
 		System.out.printf("%s 要提款$%,d 目前帳戶餘額$%,d %n", tName, amount, currentBalance);
