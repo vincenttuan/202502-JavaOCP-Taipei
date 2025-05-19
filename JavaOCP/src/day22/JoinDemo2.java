@@ -4,7 +4,7 @@ package day22;
 // 1.準備材料 -> 2.製作產品 -> 3.包裝出貨 
 public class JoinDemo2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Runnable p1 = () -> {
 			System.out.println("1.1 準備材料中...");
 			System.out.println("1.2 材料準備完成");
@@ -23,8 +23,15 @@ public class JoinDemo2 {
 		Thread pack = new Thread(p3);
 		
 		prepare.start();
+		prepare.join();
+		
 		produce.start();
+		produce.join();
+		
 		pack.start();
+		pack.join();
+		
+		System.out.println("Finish");
 
 	}
 
