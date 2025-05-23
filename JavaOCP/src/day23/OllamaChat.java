@@ -4,6 +4,11 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.stream.Stream;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class OllamaChat {
 
@@ -13,6 +18,7 @@ public class OllamaChat {
 		String prompt = "你是誰";
 		String input = "{"
 				+ "  \"model\": \"%s\", "
+				+ "  \"stream\": true, "
 				+ "  \"messages\": [ "
 				+ "    { "
 				+ "      \"role\": \"user\", "
@@ -34,11 +40,16 @@ public class OllamaChat {
 				.build();
 		
 		// 回應 response
-		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+		HttpResponse<Stream<String>> response = client.send(request, HttpResponse.BodyHandlers.ofLines());
 		
-		String result = response.body();
-		System.out.println(result);
+		response.body().forEach(line -> {
+			// {"model":"qwen2.5:0.5b","created_at":"2025-05-23T11:51:53.0757969Z","message":{"role":"assistant","content":"尽力"},"done":false}
+			JsonObject json = JsonParser.parseString(line).getAsJsonObject();
+			String content = json.getAsJsonObject("message").get("content").getAsString();
+			System.out.print(content);
+		});
 		
+		System.out.println();
 	}
 
 }
