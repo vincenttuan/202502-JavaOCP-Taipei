@@ -21,8 +21,10 @@ public class OllamaChatRAG {
 		
 		String path = "http://localhost:11434/api/chat";
 		String model = "qwen2.5:latest";
+		//---------------------------------------------------------------
 		String prompt = "以下是相關資料:(%s), 請根據這些資料回答問題:(%s)";
 		prompt = String.format(prompt, knowledge, "請問蛋餅加鮮奶茶要多少錢?");
+		//---------------------------------------------------------------
 		String input = "{"
 				+ "  \"model\": \"%s\", "
 				+ "  \"stream\": true, "
