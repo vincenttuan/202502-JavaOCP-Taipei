@@ -14,8 +14,8 @@ public class OllamaChat {
 
 	public static void main(String[] args) throws Exception {
 		String path = "http://localhost:11434/api/chat";
-		String model = "qwen2.5:0.5b";
-		String prompt = "你是誰";
+		String model = "qwen2.5:latest";
+		String prompt = "請說明何謂 AI RAG";
 		String input = "{"
 				+ "  \"model\": \"%s\", "
 				+ "  \"stream\": true, "
