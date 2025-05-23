@@ -4,6 +4,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Map;
 import java.util.stream.Stream;
 
 import com.google.gson.Gson;
@@ -11,11 +12,17 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class OllamaChatRAG {
-
+	
+	// 模擬一個小型知識庫
+	static Map<String, String> knowledge = Map.of("蛋餅", "25元", "紅茶", "10元", "奶茶", "15元", "鮮奶茶", "20元");
+	
+	
 	public static void main(String[] args) throws Exception {
+		
 		String path = "http://localhost:11434/api/chat";
 		String model = "qwen2.5:latest";
-		String prompt = "雞兔同籠,雞加兔有35隻,雞腳加兔子腳有94隻,請問雞與兔各有幾隻?";
+		String prompt = "以下是相關資料:(%s), 請根據這些資料回答問題:(%s)";
+		prompt = String.format(prompt, knowledge, "請問蛋餅加鮮奶茶要多少錢?");
 		String input = "{"
 				+ "  \"model\": \"%s\", "
 				+ "  \"stream\": true, "
@@ -27,6 +34,7 @@ public class OllamaChatRAG {
 				+ "  ]"
 				+ "}";
 		input = String.format(input, model, prompt);
+		
 		System.out.println(input);
 		
 		System.out.println("傳送資料...");
