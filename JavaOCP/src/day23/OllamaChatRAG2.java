@@ -33,7 +33,11 @@ public class OllamaChatRAG2 {
 		//---------------------------------------------------------------
 		String promptTemplate1 = "以下是相關資料:(%s), 請根據這些資料回答問題:(%s)";
 		String promptTemplate2 = "以下是相關資料:(%s), 請根據這些資料回答問題:(%s), 若找不到商品就不賣";
-		String prompt = String.format(promptTemplate1, knowledge, "我要買8個蚵仔煎加臭豆腐2盤加小杯可樂1杯多少錢?");
+		String promptTemplate3 = "請問一般坊間價格是多少:(%s)";
+		// 透過選擇不同的 promptTemplate 來決定你的 prompt
+		//String prompt = String.format(promptTemplate1, knowledge, "我要買8個蚵仔煎加臭豆腐2盤加小杯可樂1杯多少錢?");
+		//String prompt = String.format(promptTemplate2, knowledge, "我要買8個蚵仔煎加臭豆腐2盤加小杯可樂1杯多少錢?");
+		String prompt = String.format(promptTemplate3, "我要買8個蚵仔煎加臭豆腐2盤加小杯可樂1杯多少錢?");
 		//---------------------------------------------------------------
 		String input = "{"
 				+ "  \"model\": \"%s\", "
