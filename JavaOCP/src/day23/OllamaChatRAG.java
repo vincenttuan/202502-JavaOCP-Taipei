@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-public class OllamaChat {
+public class OllamaChatRAG {
 
 	public static void main(String[] args) throws Exception {
 		String path = "http://localhost:11434/api/chat";
