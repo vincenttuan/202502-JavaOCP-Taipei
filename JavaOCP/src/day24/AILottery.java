@@ -45,7 +45,7 @@ public class AILottery {
 	public static void main(String[] args) throws Exception {
 		// 請透過 ollama 來預測下一期的539樂透開獎號碼
 		// 539是1~39取5個不會重複的號碼
-		Runnable r = () -> {
+		Runnable r1 = () -> {
 			try {
 				HttpClient client = HttpClient.newHttpClient();
 				String path = "http://localhost:11434/api/chat";
@@ -58,6 +58,7 @@ public class AILottery {
 				e.printStackTrace();
 			}
 		};
+		new Thread(r1).start();
 
 	}
 
