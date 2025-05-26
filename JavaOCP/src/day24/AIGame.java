@@ -1,11 +1,19 @@
 package day24;
 
+import java.io.IOException;
+import java.net.URI;
 import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.stream.Stream;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class AIGame {
 	// 遊戲
@@ -43,10 +51,38 @@ public class AIGame {
 		scanner.close();
 	}
 	
-	public static String getAISuggestion() {
+	public static void getAISuggestion() throws Exception {
 		String prompt = "這是剪刀石頭布的歷史紀錄:" + String.join("\n", history) + "\n請根據這些紀錄, 建議我下一步該出什麼(剪刀,石頭,布)才能提高勝率, 只須回答一個選項";
+		String input = "{"
+				+ "  \"model\": \"%s\", "
+				+ "  \"stream\": true, "
+				+ "  \"messages\": [ "
+				+ "    { "
+				+ "      \"role\": \"user\", "
+				+ "      \"content\": \"%s\" "
+				+ "    } "
+				+ "  ]"
+				+ "}";
+		input = String.format(input, model, prompt);
+		HttpClient client = HttpClient.newHttpClient();
 		
-		return null;
+		// 請求 request
+		HttpRequest request = HttpRequest.newBuilder()
+				.uri(URI.create(path))
+				.header("Content-Type", "application/json")
+				.POST(HttpRequest.BodyPublishers.ofString(input))
+				.build();
+		
+		// 回應 response
+		HttpResponse<Stream<String>> response = client.send(request, HttpResponse.BodyHandlers.ofLines());
+		
+		response.body().forEach(line -> {
+			JsonObject json = JsonParser.parseString(line).getAsJsonObject();
+			String content = json.getAsJsonObject("message").get("content").getAsString();
+			System.out.print(content);
+		});
+		
+		System.out.println();
 	}
 	
 	public static void main(String[] args) {
