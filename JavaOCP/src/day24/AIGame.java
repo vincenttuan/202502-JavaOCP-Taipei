@@ -1,5 +1,8 @@
 package day24;
 
+import java.net.http.HttpClient;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
@@ -9,6 +12,12 @@ public class AIGame {
 	public static final Map<Integer, String> GAME_MAP = Map.of(0, "剪刀", 1, "石頭", 2, "布");
 	// 結果
 	public static final Map<Integer, String> WINNER_MAP = Map.of(0, "平手", 1, "user贏", 2, "pc贏");  
+	// 歷史紀錄
+	public static List<String> history = new ArrayList<>();
+	
+	public static HttpClient client = HttpClient.newHttpClient();
+	public static String path = "http://localhost:11434/api/chat";
+	public static String model = "qwen2.5:latest";
 	
 	public static void play() {
 		Scanner scanner = new Scanner(System.in);
@@ -24,10 +33,19 @@ public class AIGame {
 			// 判斷勝負 
 			int result = (user - pc + 3) % 3;
 			// 誰贏
-			System.out.printf("user出:%s pc出:%s 判定:%s%n", 
+			String roundResult = String.format("user出:%s pc出:%s 判定:%s%n", 
 					GAME_MAP.get(user), GAME_MAP.get(pc), WINNER_MAP.get(result));
+			// 顯示輸贏
+			System.out.printf(roundResult);
+			// 存入歷史檔 
+			history.add(roundResult);
 		}
 		scanner.close();
+	}
+	
+	public static String getAISuggestion() {
+		
+		return null;
 	}
 	
 	public static void main(String[] args) {
