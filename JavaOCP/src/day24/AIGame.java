@@ -26,6 +26,7 @@ public class AIGame {
 			// 誰贏
 			System.out.println(WINNER_MAP.get(result));
 		}
+		scanner.close();
 	}
 	
 	public static void main(String[] args) {
