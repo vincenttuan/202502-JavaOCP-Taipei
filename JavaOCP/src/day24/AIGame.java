@@ -31,7 +31,7 @@ public class AIGame {
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		for(int i=1;;i++) {
-			if(i > 0) {
+			if(i > 10) {
 				// Ai 介入
 				getAISuggestion();
 			}
