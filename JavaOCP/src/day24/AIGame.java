@@ -45,10 +45,10 @@ public class AIGame {
 			// 判斷勝負 
 			int result = (user - pc + 3) % 3;
 			// 誰贏
-			String roundResult = String.format("第%d回合: user出:%s pc出:%s 判定:%s%n", 
+			String roundResult = String.format("第%d回合: user出:%s pc出:%s 判定:%s", 
 					i, GAME_MAP.get(user), GAME_MAP.get(pc), WINNER_MAP.get(result));
 			// 顯示輸贏
-			System.out.printf(roundResult);
+			System.out.println(roundResult);
 			// 存入歷史檔 
 			history.add(roundResult);
 		}
