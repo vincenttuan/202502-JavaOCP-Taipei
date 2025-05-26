@@ -24,7 +24,8 @@ public class AIGame {
 			// 判斷勝負 
 			int result = (user - pc + 3) % 3;
 			// 誰贏
-			System.out.println(WINNER_MAP.get(result));
+			System.out.printf("user出:%s pc出:%s 判定:%s%n", 
+					GAME_MAP.get(user), GAME_MAP.get(pc), WINNER_MAP.get(result));
 		}
 		scanner.close();
 	}
