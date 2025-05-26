@@ -44,6 +44,7 @@ public class AIGame {
 	}
 	
 	public static String getAISuggestion() {
+		String prompt = "這是剪刀石頭布的歷史紀錄:" + String.join("\n", history) + "\n請根據這些紀錄, 建議我下一步該出什麼(剪刀,石頭,布)才能提高勝率, 只須回答一個選項";
 		
 		return null;
 	}
