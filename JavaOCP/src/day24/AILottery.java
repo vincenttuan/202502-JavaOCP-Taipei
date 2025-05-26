@@ -59,7 +59,6 @@ public class AILottery {
 			}
 		};
 		new Thread(r1).start();
-
 	}
 
 	private static String getLotteryHistory() throws Exception {
