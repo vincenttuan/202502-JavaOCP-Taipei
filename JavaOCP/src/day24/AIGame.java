@@ -56,7 +56,7 @@ public class AIGame {
 	}
 	
 	public static void getAISuggestion() throws Exception {
-		String prompt = "這是剪刀石頭布的歷史紀錄:" + String.join(",", history) + ",請根據這些紀錄, 建議我下一步該出什麼(剪刀,石頭,布)才能提高勝率, 只須回答一個選項";
+		String prompt = "這是剪刀石頭布的歷史紀錄:" + String.join(",", history).replaceAll("\r\n", "") + ",請根據這些紀錄, 建議我下一步該出什麼(剪刀,石頭,布)才能提高勝率, 只須回答一個選項";
 		String input = "{"
 				+ "  \"model\": \"%s\", "
 				+ "  \"stream\": true, "
@@ -67,6 +67,7 @@ public class AIGame {
 				+ "    } "
 				+ "  ]"
 				+ "}";
+		System.out.println(prompt);
 		input = String.format(input, model, prompt);
 		HttpClient client = HttpClient.newHttpClient();
 		
