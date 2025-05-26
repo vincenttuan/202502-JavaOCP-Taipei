@@ -27,10 +27,14 @@ public class AIGame {
 	public static String path = "http://localhost:11434/api/chat";
 	public static String model = "qwen2.5:latest";
 	
-	public static void play() {
+	public static void play() throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
-		for(int i=0;;i++) {
+		for(int i=1;;i++) {
+			if(i > 10) {
+				// Ai 介入
+				getAISuggestion();
+			}
 			System.out.printf("第 %02d 回:請輸入(0)剪刀 (1)石頭 (2)布:", i);
 			int user = scanner.nextInt(); // User 出拳 
 			if(user > 2 || user < 0) {
@@ -85,7 +89,7 @@ public class AIGame {
 		System.out.println();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		play();
 	}
 	
