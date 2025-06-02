@@ -58,8 +58,9 @@ public class BMIJFrame extends JFrame {
 		// JTable 在滾動面板(JScrollPane) 中的可視大小
 		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230)); 
 		// 支援欄位排序
-		TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>();
-		//jTable.setRowSorter(sorter);
+		TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
+		sorter.setSortable(3, false); // 診斷欄位不提供排序功能
+		jTable.setRowSorter(sorter);
 		
 		JScrollPane scrollPane = new JScrollPane(jTable);
 		
