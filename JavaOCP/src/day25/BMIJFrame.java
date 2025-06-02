@@ -14,6 +14,7 @@ public class BMIJFrame extends JFrame {
 		setTitle("BMI 計算機");
 		setSize(300, 123); // 設定視窗大小(寬度, 高度)
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 按下視窗上方的"X"可以結束程式
+		setLocationRelativeTo(null); // 置中
 	}
 	
 	// 主程式
