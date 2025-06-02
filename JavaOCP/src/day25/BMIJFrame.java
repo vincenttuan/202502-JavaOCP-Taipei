@@ -1,20 +1,26 @@
 package day25;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
 
 public class BMIJFrame extends JFrame {
 	// 定義要用的 UI 元件
 	private JLabel jLabelHeight, jLabelWeight, jLabelResult, jLabelDiag; 
 	private JTextField jTextFieldHeight, jTextFieldWeight;
 	private JButton jButtonCalc;
+	private JTable jTable;
+	private DefaultTableModel model; // 資料擺放規則
 	
 	public BMIJFrame() {
 		init();
@@ -23,7 +29,7 @@ public class BMIJFrame extends JFrame {
 	// 初始配置
 	private void init() {
 		setTitle("BMI 計算機");
-		setSize(300, 123); // 設定視窗大小(寬度, 高度)
+		setSize(600, 350); // 設定視窗大小(寬度, 高度)
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 按下視窗上方的"X"可以結束程式
 		setLocationRelativeTo(null); // 視窗置中
 		
@@ -39,6 +45,15 @@ public class BMIJFrame extends JFrame {
 		jTextFieldWeight = new JTextField(5); // 5個字的空間
 		jButtonCalc = new JButton("計算");
 		
+		// JTable 設定
+		String[] columnsNames = {"身高(cm)", "體重(kg)", "BMI", "診斷"};
+		model = new DefaultTableModel(columnsNames, 0); // 初始筆數 0 筆 
+		jTable = new JTable(model);
+		jTable.setFillsViewportHeight(true);
+		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230));
+		JScrollPane scrollPane = new JScrollPane(jTable);
+		
+		
 		// 配置元件到 JFrame 畫面上
 		add(jLabelHeight);     // 身高標籤
 		add(jTextFieldHeight); // 身高輸入框
@@ -47,6 +62,7 @@ public class BMIJFrame extends JFrame {
 		add(jButtonCalc);      // 計算按鈕
 		add(jLabelResult);     // 計算標籤結果
 		add(jLabelDiag);       // 診斷標籤
+		add(scrollPane);
 		
 		// 按下計算按鈕
 		jButtonCalc.addActionListener((e) -> calcBMI());
