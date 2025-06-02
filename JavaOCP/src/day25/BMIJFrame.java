@@ -77,8 +77,8 @@ public class BMIJFrame extends JFrame {
 		// 按下計算按鈕
 		jButtonCalc.addActionListener((e) -> calcBMI());
 		
-		// 預設加入 10 筆資料
-		for(int i=0;i<10;i++) {
+		// 預設加入 20 筆資料
+		for(int i=0;i<20;i++) {
 			double h = 150 + Math.random() * 50; // 150~200cm
 			double w = 40 + Math.random() * 60; // 40~100kg
 			double bmiValue = w / Math.pow(h/100, 2);
