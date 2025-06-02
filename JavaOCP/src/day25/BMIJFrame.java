@@ -49,8 +49,9 @@ public class BMIJFrame extends JFrame {
 		String[] columnsNames = {"身高(cm)", "體重(kg)", "BMI", "診斷"};
 		model = new DefaultTableModel(columnsNames, 0); // 初始筆數 0 筆 
 		jTable = new JTable(model);
-		jTable.setFillsViewportHeight(true);
-		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230));
+		jTable.setFillsViewportHeight(true); // 當資料行數不足時, 表格背景仍填滿整個可視視窗
+		// JTable 在滾動面板(JScrollPane) 中的可視大小
+		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230)); 
 		JScrollPane scrollPane = new JScrollPane(jTable);
 		
 		
