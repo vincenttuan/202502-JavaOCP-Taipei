@@ -1,5 +1,6 @@
 package day25;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -10,7 +11,7 @@ import javax.swing.SwingUtilities;
 
 public class BMIJFrame extends JFrame {
 	// 定義要用的 UI 元件
-	private JLabel jLabelHeight, jLabelWeight, jLabelResult; 
+	private JLabel jLabelHeight, jLabelWeight, jLabelResult, jLabelDiag; 
 	private JTextField jTextFieldHeight, jTextFieldWeight;
 	private JButton jButtonCalc;
 	
@@ -32,6 +33,7 @@ public class BMIJFrame extends JFrame {
 		jLabelHeight = new JLabel("身高(cm):");
 		jLabelWeight = new JLabel("體重(kg):");
 		jLabelResult = new JLabel("BMI:");
+		jLabelDiag = new JLabel("診斷:");
 		jTextFieldHeight = new JTextField(5); // 5個字的空間
 		jTextFieldWeight = new JTextField(5); // 5個字的空間
 		jButtonCalc = new JButton("計算");
@@ -43,6 +45,7 @@ public class BMIJFrame extends JFrame {
 		add(jTextFieldWeight); // 體重輸入框
 		add(jButtonCalc);      // 計算按鈕
 		add(jLabelResult);     // 計算標籤結果
+		add(jLabelDiag);       // 診斷標籤
 		
 		// 按下計算按鈕
 		jButtonCalc.addActionListener((e) -> calcBMI());
@@ -54,6 +57,17 @@ public class BMIJFrame extends JFrame {
 		double bmiValue = w / Math.pow(h/100, 2);
 		
 		jLabelResult.setText(String.format("BMI: %.2f", bmiValue));
+		
+		if(bmiValue <= 18) {
+			jLabelDiag.setText("過輕");
+			jLabelDiag.setForeground(Color.RED);
+		} else if(bmiValue > 23) {
+			jLabelDiag.setText("過重");
+			jLabelDiag.setForeground(Color.RED);
+		} else {
+			jLabelDiag.setText("正常");
+			jLabelDiag.setForeground(Color.GREEN);
+		}
 	}
 	
 	// 主程式
