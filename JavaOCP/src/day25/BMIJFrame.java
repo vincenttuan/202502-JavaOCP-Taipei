@@ -54,7 +54,6 @@ public class BMIJFrame extends JFrame {
 		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230)); 
 		JScrollPane scrollPane = new JScrollPane(jTable);
 		
-		
 		// 配置元件到 JFrame 畫面上
 		add(jLabelHeight);     // 身高標籤
 		add(jTextFieldHeight); // 身高輸入框
@@ -75,19 +74,31 @@ public class BMIJFrame extends JFrame {
 		double bmiValue = w / Math.pow(h/100, 2);
 		
 		jLabelResult.setText(String.format("BMI: %.2f", bmiValue));
-		
+		String diag = null;
+		Color diagColor = null;
 		if(bmiValue <= 18) {
-			jLabelDiag.setText("過輕");
-			jLabelDiag.setForeground(Color.RED);
+			diag = "過輕";
+			diagColor = Color.RED;
 		} else if(bmiValue > 23) {
-			jLabelDiag.setText("過重");
-			jLabelDiag.setForeground(Color.RED);
+			diag = "過重";
+			diagColor = Color.RED;
 		} else {
-			jLabelDiag.setText("正常");
+			diag = "正常";
 			//jLabelDiag.setForeground(new Color(0x005100));
-			jLabelDiag.setForeground(Color.BLUE);
+			diagColor = Color.BLUE;
 		}
+		jLabelDiag.setText(diag);
+		jLabelDiag.setForeground(diagColor);
 		jLabelDiag.setFont(new Font("標楷體", Font.BOLD, 20));
+		
+		// 新增資料到 JTable
+		model.addRow(new Object[] {
+				String.format("%.1f", h),
+				String.format("%.1f", w),
+				String.format("%.2f", bmiValue),
+				String.format("%s", diag),
+		});
+		
 	}
 	
 	// 主程式
