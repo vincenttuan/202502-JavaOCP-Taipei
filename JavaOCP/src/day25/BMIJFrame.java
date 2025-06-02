@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.RowSorter;
+import javax.swing.SortOrder;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -55,7 +59,7 @@ public class BMIJFrame extends JFrame {
 		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230)); 
 		// 支援欄位排序
 		TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>();
-		jTable.setRowSorter(sorter);
+		//jTable.setRowSorter(sorter);
 		
 		JScrollPane scrollPane = new JScrollPane(jTable);
 		
@@ -103,6 +107,7 @@ public class BMIJFrame extends JFrame {
 				String.format("%.2f", bmiValue),
 				String.format("%s", diag),
 		});
+		
 		
 	}
 	
