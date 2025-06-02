@@ -76,6 +76,22 @@ public class BMIJFrame extends JFrame {
 		
 		// 按下計算按鈕
 		jButtonCalc.addActionListener((e) -> calcBMI());
+		
+		// 預設加入 10 筆資料
+		for(int i=0;i<10;i++) {
+			double h = 150 + Math.random() * 50; // 150~200cm
+			double w = 40 + Math.random() * 60; // 40~100kg
+			double bmiValue = w / Math.pow(h/100, 2);
+			String diag = (bmiValue <= 18) ? "過輕" : (bmiValue > 23) ? "過重" : "正常";
+			// 新增資料到 JTable
+			model.addRow(new Object[] {
+					String.format("%.1f", h),
+					String.format("%.1f", w),
+					String.format("%.2f", bmiValue),
+					String.format("%s", diag),
+			});
+		}
+		
 	}
 	
 	private void calcBMI() {
