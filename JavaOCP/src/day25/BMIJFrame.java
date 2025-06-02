@@ -53,7 +53,7 @@ public class BMIJFrame extends JFrame {
 		double w = Double.parseDouble(jTextFieldWeight.getText()); // 取得使用者在體重欄位所輸入的資料並轉成 double
 		double bmiValue = w / Math.pow(h/100, 2);
 		
-		jLabelResult.setText(String.format("BMI:%.2f", bmiValue));
+		jLabelResult.setText(String.format("BMI: %.2f", bmiValue));
 	}
 	
 	// 主程式
