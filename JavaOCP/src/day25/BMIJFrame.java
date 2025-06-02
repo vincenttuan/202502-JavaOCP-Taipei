@@ -23,7 +23,7 @@ public class BMIJFrame extends JFrame {
 	// 定義要用的 UI 元件
 	private JLabel jLabelHeight, jLabelWeight, jLabelResult, jLabelDiag; 
 	private JTextField jTextFieldHeight, jTextFieldWeight;
-	private JButton jButtonCalc;
+	private JButton jButtonCalc, jButtonClear;
 	private JTable jTable;
 	private DefaultTableModel model; // 資料擺放規則
 	
@@ -49,6 +49,7 @@ public class BMIJFrame extends JFrame {
 		jTextFieldHeight = new JTextField(5); // 5個字的空間
 		jTextFieldWeight = new JTextField(5); // 5個字的空間
 		jButtonCalc = new JButton("計算");
+		jButtonClear = new JButton("清空");
 		
 		// JTable 設定
 		String[] columnsNames = {"身高(cm)", "體重(kg)", "BMI", "診斷"};
@@ -70,12 +71,16 @@ public class BMIJFrame extends JFrame {
 		add(jLabelWeight);     // 體重標籤輸入框
 		add(jTextFieldWeight); // 體重輸入框
 		add(jButtonCalc);      // 計算按鈕
+		add(jButtonClear);     // 清空按鈕
 		add(jLabelResult);     // 計算標籤結果
 		add(jLabelDiag);       // 診斷標籤
 		add(scrollPane);
 		
 		// 按下計算按鈕
 		jButtonCalc.addActionListener((e) -> calcBMI());
+		
+		// 按下清空按鈕
+		jButtonClear.addActionListener((e) -> model.setRowCount(0));
 		
 		// 預設加入 20 筆資料
 		for(int i=0;i<20;i++) {
