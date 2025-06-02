@@ -44,6 +44,16 @@ public class BMIJFrame extends JFrame {
 		add(jButtonCalc);      // 計算按鈕
 		add(jLabelResult);     // 計算標籤結果
 		
+		// 按下計算按鈕
+		jButtonCalc.addActionListener((e) -> calcBMI());
+	}
+	
+	private void calcBMI() {
+		double h = Double.parseDouble(jTextFieldHeight.getText()); // 取得使用者在身高欄位所輸入的資料並轉成 double
+		double w = Double.parseDouble(jTextFieldWeight.getText()); // 取得使用者在體重欄位所輸入的資料並轉成 double
+		double bmiValue = w / Math.pow(h/100, 2);
+		
+		jLabelResult.setText(String.format("BMI:%.2f", bmiValue));
 	}
 	
 	// 主程式
