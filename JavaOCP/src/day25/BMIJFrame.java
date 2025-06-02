@@ -13,6 +13,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 public class BMIJFrame extends JFrame {
 	// 定義要用的 UI 元件
@@ -52,6 +53,10 @@ public class BMIJFrame extends JFrame {
 		jTable.setFillsViewportHeight(true); // 當資料行數不足時, 表格背景仍填滿整個可視視窗
 		// JTable 在滾動面板(JScrollPane) 中的可視大小
 		jTable.setPreferredScrollableViewportSize(new Dimension(560, 230)); 
+		// 支援欄位排序
+		TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>();
+		jTable.setRowSorter(sorter);
+		
 		JScrollPane scrollPane = new JScrollPane(jTable);
 		
 		// 配置元件到 JFrame 畫面上
