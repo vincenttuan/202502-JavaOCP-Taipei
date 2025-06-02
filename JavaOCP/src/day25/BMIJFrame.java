@@ -2,6 +2,7 @@ package day25;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -66,8 +67,10 @@ public class BMIJFrame extends JFrame {
 			jLabelDiag.setForeground(Color.RED);
 		} else {
 			jLabelDiag.setText("正常");
-			jLabelDiag.setForeground(Color.GREEN);
+			//jLabelDiag.setForeground(new Color(0x005100));
+			jLabelDiag.setForeground(Color.BLUE);
 		}
+		jLabelDiag.setFont(new Font("標楷體", Font.BOLD, 20));
 	}
 	
 	// 主程式
