@@ -10,6 +10,7 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -100,8 +101,21 @@ public class BMIJFrame extends JFrame {
 	}
 	
 	private void calcBMI() {
-		double h = Double.parseDouble(jTextFieldHeight.getText()); // 取得使用者在身高欄位所輸入的資料並轉成 double
-		double w = Double.parseDouble(jTextFieldWeight.getText()); // 取得使用者在體重欄位所輸入的資料並轉成 double
+		double h = 0;
+		try {
+			h = Double.parseDouble(jTextFieldHeight.getText()); // 取得使用者在身高欄位所輸入的資料並轉成 double
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(this, "身高請輸入數字", "錯誤", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		
+		double w = 0;
+		try {
+			w = Double.parseDouble(jTextFieldWeight.getText()); // 取得使用者在體重欄位所輸入的資料並轉成 double
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(this, "體重請輸入數字", "錯誤", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
 		double bmiValue = w / Math.pow(h/100, 2);
 		
 		jLabelResult.setText(String.format("BMI: %.2f", bmiValue));
