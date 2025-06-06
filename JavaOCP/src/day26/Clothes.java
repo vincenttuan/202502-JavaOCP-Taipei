@@ -8,5 +8,29 @@ package day26;
 	洗衣過程需要一段時間，顧客在等待期間可以去做其他事情。當衣服洗好時，系統會通知顧客回來取衣。
  * */
 public class Clothes {
-
+	private boolean isClean; // 衣服是否已經洗乾淨?(預設是 false)
+	private String owner; // 衣服的主人
+	
+	public Clothes(String owner) {
+		this.owner = owner;
+	}
+	
+	// 洗衣動作, 將衣服設定為洗乾淨了(true)
+	public void wash() {
+		isClean = true;
+	}
+	
+	// 查詢衣服是否已經洗乾淨
+	public boolean isClean() {
+		return isClean;
+	}
+	
+	@Override
+	public String toString() {
+		return owner + " 的" + (isClean ? "乾淨" : "髒") + "衣服";
+	}
 }
+
+
+
+
