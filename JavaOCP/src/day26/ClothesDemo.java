@@ -36,6 +36,7 @@ public class ClothesDemo {
 		
 		// 關閉洗衣服務
 		service.shutdown();
+		System.out.println("程式結束~");
 	}
 
 }
