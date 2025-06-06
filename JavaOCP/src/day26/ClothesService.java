@@ -33,5 +33,9 @@ public class ClothesService {
 		return executorService.submit(() -> service(dirtyClothes));
 	}
 	
+	// 關閉執行緒池服務
+	public void shutdown() {
+		executorService.shutdown();
+	}
 	
 }
