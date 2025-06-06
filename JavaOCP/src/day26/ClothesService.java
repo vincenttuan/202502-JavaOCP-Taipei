@@ -1,5 +1,6 @@
 package day26;
 
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -17,7 +18,7 @@ public class ClothesService {
 	// 洗衣服務
 	public Clothes service(Clothes dirtyClothes) {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(new Random().nextInt(3000) + 2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
